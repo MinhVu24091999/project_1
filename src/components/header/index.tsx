@@ -343,9 +343,9 @@ const Header = () => {
         <div className="hidden sm:flex items-center gap-x-5">
           <div className="flex items-center gap-x-10 text-lg font-medium">
             <a
-              href={'PATH_ROUTER.INTRODUCE'}
+              href={"PATH_ROUTER.INTRODUCE"}
               className={clsx(
-                pathName === 'PATH_ROUTER.INTRODUCE'
+                pathName === "PATH_ROUTER.INTRODUCE"
                   ? "text-[#1EA68B]"
                   : "text-[#000000]"
               )}
@@ -353,9 +353,9 @@ const Header = () => {
               サービス紹介
             </a>
             <a
-              href={'PATH_ROUTER.COMPANY_PROFILE'}
+              href={"PATH_ROUTER.COMPANY_PROFILE"}
               className={clsx(
-                pathName === 'PATH_ROUTER.COMPANY_PROFILE'
+                pathName === "PATH_ROUTER.COMPANY_PROFILE"
                   ? "text-[#1EA68B]"
                   : "text-[#000000]"
               )}
@@ -373,90 +373,6 @@ const Header = () => {
             <EmailIcon className="w-[23px] h-[18px]" />
             メールでお問い合わせ
           </button>
-        </div>
-
-        <div className="flex items-center gap-2 text-[30px] font-medium cursor-pointer text-black sm:hidden">
-          <div
-            ref={openTriggerRef}
-            className="menu-trigger"
-            onClick={handleOpenClick}
-          >
-            <div
-              ref={openTriggerTopRef}
-              className={`menu-trigger-bar top`}
-            ></div>
-            <div
-              ref={openTriggerMiddleRef}
-              className={`menu-trigger-bar middle`}
-            ></div>
-            <div
-              ref={openTriggerBottomRef}
-              className={`menu-trigger-bar bottom`}
-            ></div>
-          </div>
-        </div>
-        <div
-          className="animation-container bg-[#e0dfe1] fixed right-0 top-0 w-[0px] h-screen z-[50] overflow-hidden"
-          style={{
-            width: isOpenMenu ? 500 : 0,
-          }}
-        >
-          <div
-            ref={closeTriggerRef}
-            className="close-trigger"
-            onClick={handleCloseClick}
-          >
-            <div
-              ref={closeTriggerLeftRef}
-              className={`close-trigger-bar left`}
-            ></div>
-            <div
-              ref={closeTriggerRightRef}
-              className={`close-trigger-bar right`}
-            ></div>
-          </div>
-          <div className="inner-container">
-            <i className="menu-bg top" ref={menuTopRef}></i>
-            <i className="menu-bg middle" ref={menuMiddleRef}></i>
-            <i className="menu-bg bottom" ref={menuBottomRef}></i>
-            <div className="menu-container" ref={menuContainerRef}>
-              <div
-                className="flex flex-col items-center gap-y-5 menu"
-                ref={menuRef}
-              >
-                <a
-                  href={'PATH_ROUTER.INTRODUCE'}
-                  className={clsx(
-                    pathName === 'PATH_ROUTER.INTRODUCE'
-                      ? "!text-[#1EA68B]"
-                      : "!text-[#000000]"
-                  )}
-                >
-                  サービス紹介
-                </a>
-                <a
-                  href={'PATH_ROUTER.COMPANY_PROFILE'}
-                  className={clsx(
-                    pathName === 'PATH_ROUTER.COMPANY_PROFILE'
-                      ? "!text-[#1EA68B]"
-                      : "!text-[#000000]"
-                  )}
-                >
-                  会社概要
-                </a>
-
-                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]">
-                  <LineIcon />
-                  LINEでお問い合わせ
-                </button>
-
-                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#174A42]">
-                  <EmailIcon className="w-[23px] h-[18px]" />
-                  メールでお問い合わせ
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

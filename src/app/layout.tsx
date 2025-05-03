@@ -2,9 +2,9 @@ import clsx from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "../assets/scss/globals.scss";
-import "../assets/scss/header.scss";
 import AOSComponent from "@/components/AOSComponent";
 import Footer from "../components/footer";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Project 1",
@@ -22,9 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(notoSansJP.className)}>
         <AOSComponent>
-         {/* <Header/> */}
-         {children}
-         <Footer/>
+          <Header />
+          {children}
+          <Footer />
         </AOSComponent>
       </body>
     </html>

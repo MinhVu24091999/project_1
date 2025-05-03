@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -8,23 +9,34 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        blue: "#050C9C",
-        green: "#01B202",
-        orange: "#FF7F02",
-        red: "#E70012",
-        yellow: "#FDC500",
-        primary: "#050C9C",
-        black: '#1D1D1D',
-        gray: '#AFB5AE',
-        'steel-blue': "#3F5275",
-        "soft-white": "#F6F7F4"
+      fontFamily: {
+        sans: ['"M PLUS 1p"', ...fontFamily.sans],
+        serif: ['"Noto Serif JP"', ...fontFamily.serif],
       },
-      width: {
-        container: "1440px",
+      backgroundImage: {
+        header: "url('/images/bg_header.jpg')",
+        dots: "url('/images/bg_dots.png')",
+        evolution: "url('/images/bg_evolution.png')",
+        about: "url('/images/bg_about.png')",
+        comment: "url('/images/comment.png')",
+        "tracou-hunter": "url(/images/bg_tracou.png)",
+        "title-green": "url('/images/bg_title_green.png')",
+        "title-red": "url('/images/bg_title_red.png')",
+        "title-orange": "url('/images/bg_title_orange.png')",
+        "next-generation": "url('/images/bg_generation.png')",
+        "evolution-content": "url('/images/bg_evolution_2.png')",
       },
-      fontFamily: {},
-      backgroundImage: {},
+      keyframes: {
+        wave: {
+          "0%, 100%": { opacity: "0.2", transform: "translateY(0)" },
+          "50%": { opacity: "1", transform: "translateY(6px)" },
+        },
+      },
+      animation: {
+        "wave-1": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+        "wave-2": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.2s",
+        "wave-3": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.4s",
+      },
     },
     screens: {
       xs: "375px",
