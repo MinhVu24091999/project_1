@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Image from "next/image";
+
 const SectionImportantStore = () => {
   return (
     <div className="max-w-[1266px] mx-auto relative flex flex-col gap-y-10 mt-[60px] sm:mt-[100px] items-center px-4 sm:px-0 ">
@@ -9,29 +11,37 @@ const SectionImportantStore = () => {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-4 sm:h-[497px] gap-3">
-        <img
+        <Image
           data-aos="fade-right"
           src="/images/important_store_1.png"
           alt=""
           className="h-full"
+          width={290}
+          height={497}
         />
-        <img
+        <Image
           data-aos="fade-right"
           src="/images/important_store_2.png"
           alt=""
           className="h-full"
+          width={290}
+          height={497}
         />
-        <img
+        <Image
           data-aos="fade-left"
           src="/images/important_store_3.png"
           alt=""
           className="h-full"
+          width={290}
+          height={497}
         />
-        <img
+        <Image
           data-aos="fade-left"
           src="/images/important_store_4.png"
           alt=""
           className="h-full"
+          width={290}
+          height={497}
         />
       </div>
     </div>

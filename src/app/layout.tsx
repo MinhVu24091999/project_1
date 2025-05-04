@@ -5,6 +5,7 @@ import "../assets/scss/globals.scss";
 import AOSComponent from "@/components/AOSComponent";
 import Footer from "../components/footer";
 import Header from "@/components/header";
+import { ConfigProvider } from "antd";
 
 export const metadata: Metadata = {
   title: "Project 1",
@@ -22,9 +23,39 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(notoSansJP.className)}>
         <AOSComponent>
-          <Header />
-          {children}
-          <Footer />
+          <ConfigProvider
+            theme={{
+              components: {
+                Select: {
+                  activeBorderColor: "#E0E0E0",
+                  hoverBorderColor: "#E0E0E0",
+                  activeOutlineColor: "transparent",
+                  optionFontSize: 20,
+                  optionPadding: "20px 8px 20px 8px",
+                  selectorBg: "#F1FCF9",
+                  showArrowPaddingInlineEnd: 50,
+                },
+                Input: {
+                  activeBorderColor: "#E0E0E0",
+                  hoverBorderColor: "#CFF8EB",
+                  activeShadow: "transparent",
+                  activeBg: "#F1FCF9",
+                  addonBg: "#F1FCF9",
+                  hoverBg: "#F1FCF9",
+                  inputFontSize: 20,
+                },
+                Form: {
+                  itemMarginBottom: 0,
+                },
+              },
+            }}
+          >
+            <Header />
+            <div className="w-full min-h-screen bg-[#FFFFFF] overflow-hidden mt-[80px] sm:mt-[104px]">
+              {children}
+            </div>
+            <Footer />
+          </ConfigProvider>
         </AOSComponent>
       </body>
     </html>

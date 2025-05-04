@@ -17,7 +17,7 @@ const SectionIntroduction = () => {
             <img
               src="/images/slide-introduction.png"
               alt=""
-              className="h-[680px] w-[4140px]"
+              className="h-[680px] w-[4140px] mr-5"
             />
           </Marquee>
 
