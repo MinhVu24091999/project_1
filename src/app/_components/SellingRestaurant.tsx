@@ -5,10 +5,7 @@ import React, { FC } from "react";
 const SellingRestaurant = () => {
   return (
     <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-[40px] sm:gap-y-[80px] items-center max-w-[1440px] px-4 sm:px-10 mx-auto">
-      <p
-        className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center"
-        style={{ lineHeight: "130%" }}
-      >
+      <p className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center leading-[130%]">
         飲食店売却を <br /> おすすめする理由
       </p>
 

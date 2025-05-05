@@ -2,8 +2,9 @@ import Image from "next/image";
 import React from "react";
 import SectionRepresentative from "./_componnent/SectionRepresentative";
 import MainServices from "./_componnent/MainServices";
+import ServiceOverview from "./_componnent/service-overview";
 
-const page = () => {
+const Introduce = () => {
   return (
     <div>
       <div className="relative flex items-center justify-center pt-[58px] pb-[64px] bg-[#CFF8EB] w-full">
@@ -22,8 +23,10 @@ const page = () => {
 
       <SectionRepresentative />
       <MainServices />
+
+      <ServiceOverview />
     </div>
   );
 };
 
-export default page;
+export default Introduce;

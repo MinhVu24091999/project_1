@@ -42,10 +42,7 @@ const StoreStation = () => {
               飲食店25店舗を経営してきた 代表が、直接あなたを担当いたします。
             </p>
 
-            <p
-              className="sm:text-xl px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full"
-              style={{ lineHeight: "200%" }}
-            >
+            <p className="sm:text-xl px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full leading-[200%]">
               飲食店経営の10年以上の経験や、これまでのお取引で培ったノウハウがあります。
               <br />
               ただの飲食店売買にとどまらず、様々なお悩みをプロに相談できるのが

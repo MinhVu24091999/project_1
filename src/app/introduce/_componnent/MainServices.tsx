@@ -11,10 +11,7 @@ const MainServices = () => {
   const { windowWidth } = useWindowSize();
   return (
     <div className="mt-12 sm:mt-[160px]">
-      <p
-        className="text-3xl sm:text-[64px] font-black text-center text-[#000000] mb-10 sm:mb-[75px] px-10"
-        style={{ lineHeight: "120%" }}
-      >
+      <p className="text-3xl sm:text-[64px] font-black text-center text-[#000000] mb-10 sm:mb-[75px] px-10 leading-[120%]">
         店舗ステーションが提供する <br />
         主なサービス
       </p>

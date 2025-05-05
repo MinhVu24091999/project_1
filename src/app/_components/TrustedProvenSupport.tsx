@@ -1,19 +1,11 @@
 import { HomeIcon, Top10Icon, TwoPeopleIcon } from "@/assets/icons";
 import Image from "next/image";
-import React, {
-  ComponentPropsWithoutRef,
-  FC,
-  ReactElement,
-  ReactNode,
-} from "react";
+import React, { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 
 const TrustedProvenSupport = () => {
   return (
     <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-10 items-center max-w-[1440px] px-4 sm:px-10 mx-auto">
-      <p
-        className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center"
-        style={{ lineHeight: "150%" }}
-      >
+      <p className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center leading-[150%]">
         信頼と実績のサポート
       </p>
 

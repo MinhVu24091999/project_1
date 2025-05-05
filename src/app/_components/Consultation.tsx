@@ -1,4 +1,4 @@
-import { PolygonIcon } from "@/assets/icons";
+import AvailableButton from "@/components/AvailableButton";
 import Image from "next/image";
 import React from "react";
 
@@ -31,7 +31,7 @@ const Consultation = () => {
           />
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center sm:min-w-[506px]">
           <Image
             src={"/images/restaurant_sales.png"}
             alt=""
@@ -39,28 +39,18 @@ const Consultation = () => {
             width={324}
             height={62}
           />
-          <p
-            className="text-3xl sm:text-[36px] font-black text-[#111111] mb-[30px]"
-            style={{ lineHeight: "100%" }}
-          >
+          <p className="text-3xl sm:text-[36px] font-black text-[#111111] mb-[30px] leading-[100%]">
             店舗ステーションに <br />
             お任せください！
           </p>
 
-          <button className="relative px-8 sm:px-[94px] pt-[21px] pb-4 rounded-full bg-[#2DBF15] shadow-[0px_10px_0px_0px_#1B800A;] flex flex-col items-center sm:gap-y-2 ">
-            <div className="flex items-center gap-x-3 sm:gap-x-[25px]">
-              <div className="w-10 sm:w-[80px] h-[1px] bg-[#FCFFFC] rounded-full" />
-              <p className="text-2xl sm:text-[32px] font-medium">
-                24時間受付中
-              </p>
-              <div className="w-10 sm:w-[80px] h-[1px] bg-[#FCFFFC] rounded-full" />
-            </div>
-            <span className="flex items-center text-3xl sm:text-[52px] font-black leading-none">
-              LINEで<p className="text-[#FFEE02]">相談</p>する
-            </span>
-
-            <PolygonIcon className="h-5 w-3 sm:h-10 sm:w-7 absolute top-1/2 -translate-y-1/2 right-[13px]" />
-          </button>
+          <AvailableButton
+            className="shadow-[0px_10px_0px_0px_#1B800A;] sm:px-[83px] sm:w-[506px]"
+            labelClassName="!text-xl"
+            contentClassName="sm:!text-[42px]"
+            wrapperLabel="sm:!gap-x-4"
+            iconClassName="sm:!w-[35px] sm:!h-[24px]"
+          />
         </div>
       </div>
     </div>

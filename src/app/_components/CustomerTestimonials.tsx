@@ -106,10 +106,9 @@ const CustomerTestimonialsItem: React.FC<TestimonialBlockProps> = ({
       >
         <span
           className={clsx(
-            "text-2xl sm:text-[36px] font-bold text-[#000000] text-center sm:text-start",
+            "text-2xl sm:text-[36px] font-bold text-[#000000] text-center sm:text-start leading-[130%]",
             labelClassName
           )}
-          style={{ lineHeight: "130%" }}
         >
           <p className="text-[#1EA68B] inline-block">{hightLightText} </p>{" "}
           {label}

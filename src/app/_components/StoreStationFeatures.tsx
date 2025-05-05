@@ -6,10 +6,7 @@ import Marquee from "react-fast-marquee";
 const StoreStationFeatures = () => {
   return (
     <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-[40px] sm:gap-y-[80px] items-center">
-      <p
-        className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center "
-        style={{ lineHeight: "130%" }}
-      >
+      <p className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center leading-[130%]">
         だから選ばれる！ <br /> 店舗ステーションの特徴
       </p>
       <div className="py-[80px] w-full bg-[#F1FCF9] ">

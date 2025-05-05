@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { EmailIcon, LineIcon } from "@/assets/icons";
 import { PATH_ROUTER } from "@/const/path.const";
+import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const pathName = usePathname();
@@ -11,17 +13,19 @@ const Header = () => {
   return (
     <div className="fixed top-0 bg-[#FFFFFF] border-b border-[#9FF0D9] z-50 w-full">
       <div className="px-5 sm:px-10 py-5 flex items-center justify-between right-0 left-0 z-50 max-w-screen-2xl mx-auto overflow-hidden ">
-        <a href={PATH_ROUTER.ROOT}>
-          <img
+        <Link href={PATH_ROUTER.ROOT}>
+          <Image
             src="/images/app_logo.png"
             alt="app logo"
             className="h-10 w-[204px]"
+            width={204}
+            height={40}
           />
-        </a>
+        </Link>
 
         <div className="hidden sm:flex items-center gap-x-5">
           <div className="flex items-center gap-x-10 text-lg font-medium">
-            <a
+            <Link
               href={PATH_ROUTER.INTRODUCE}
               className={clsx(
                 pathName.replaceAll("/", "") ===
@@ -31,8 +35,8 @@ const Header = () => {
               )}
             >
               サービス紹介
-            </a>
-            <a
+            </Link>
+            <Link
               href={PATH_ROUTER.COMPANY_PROFILE}
               className={clsx(
                 pathName.replaceAll("/", "") ===
@@ -42,7 +46,7 @@ const Header = () => {
               )}
             >
               会社概要
-            </a>
+            </Link>
           </div>
 
           <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]">

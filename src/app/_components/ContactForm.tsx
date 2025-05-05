@@ -10,10 +10,7 @@ const { TextArea } = Input;
 const ContactForm = () => {
   return (
     <div className="max-w-[1000px] px-4 sm:px-10 py-10 sm:py-[100px] text-[#111111] mt-12 sm:mt-[100px] border border-[#A5A8AD] rounded-[10px]  mx-auto flex flex-col items-center gap-y-5 mb-[80px] sm:mb-[270px]">
-      <p
-        className="text-3xl sm:text-[48px] font-bold"
-        style={{ lineHeight: "100%" }}
-      >
+      <p className="text-3xl sm:text-[48px] font-bold leading-[100%]">
         お問い合わせフォーム
       </p>
       <p className="text-sm sm:text-base max-w-[460px]">

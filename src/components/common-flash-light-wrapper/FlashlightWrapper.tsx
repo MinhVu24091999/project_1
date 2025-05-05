@@ -39,7 +39,7 @@ const FlashlightWrapper = ({
       container.removeEventListener("mousemove", handleMouseMove);
       container.addEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [flashlightOffset]);
 
   return (
     <div
