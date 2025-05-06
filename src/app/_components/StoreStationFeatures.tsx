@@ -12,7 +12,7 @@ const StoreStationFeatures = () => {
       <div className="py-[80px] w-full bg-[#F1FCF9] ">
         <div className="max-w-[1440px] mx-auto">
           <Marquee direction="right">
-            <div className="grid grid-cols-4 gap-x-5 w-fit ">
+            <div className="grid grid-cols-4 gap-x-5 w-fit mr-5">
               {DATA.map((item, index) => (
                 <StoreStationFeaturesCard
                   key={index}
@@ -54,10 +54,7 @@ const StoreStationFeaturesCard: FC<StoreStationFeaturesCardProps> = ({
         className="rounded-[20px]"
       />
       <div
-        className={clsx(
-          "flex flex-col gap-y-5 items-center justify-between h-full",
-          className
-        )}
+        className={clsx("flex flex-col gap-y-5 items-center h-full", className)}
       >
         <p className="text-[24px] font-bold text-center max-w-[255px]">
           {label}

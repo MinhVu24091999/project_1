@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { LineIcon } from "@/assets/icons";
+import { PATH_ROUTER } from "@/const/path.const";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -16,14 +18,17 @@ const Footer = () => {
 
         <div className="flex flex-col sm:flex-row items-center gap-x-[100px] gap-y-5">
           <div className="flex sm:flex-col gap-x-5 gap-y-[30px] font-bold">
-            <a href={''}>サービス紹介</a>
-            <a href={'PATH_ROUTER.COMPANY_PROFILE'}>会社概要</a>
+            <a href={""}>サービス紹介</a>
+            <a href={"PATH_ROUTER.COMPANY_PROFILE"}>会社概要</a>
           </div>
 
-          <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15] text-white">
+          <Link
+            href={PATH_ROUTER.CONTACT}
+            className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15] text-white"
+          >
             <LineIcon />
-            LINEでお問い合わせ
-          </button>
+            でお問い合わせ
+          </Link>
         </div>
       </div>
       <div className="absolute bottom-2 md:bottom-5 text-sm ">

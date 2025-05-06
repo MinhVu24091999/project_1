@@ -26,13 +26,15 @@ const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
             width={348}
             height={348}
           />
-          <Image
-            src={"/images/bubble-consultation.png"}
-            alt=""
-            className="rounded-full absolute left-10 sm:left-[14%] -translate-x-1/2 bottom-1/2 sm:bottom-[38%]"
-            width={178}
-            height={125}
-          />
+          <div className="absolute left-10 sm:left-[14%] -translate-x-1/2 bottom-1/2 sm:bottom-[38%]">
+            <Image
+              src={"/images/bubble-consultation.png"}
+              alt=""
+              className="rounded-full  animate-zoomLoop"
+              width={178}
+              height={125}
+            />
+          </div>
         </div>
 
         <div className="flex flex-col items-center sm:min-w-[506px]">
@@ -42,6 +44,9 @@ const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
             className="rounded-full -mr-1/2"
             width={324}
             height={62}
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            data-aos-delay="500"
           />
           <p className="text-3xl sm:text-[36px] font-black text-[#111111] mb-[30px] leading-[100%]">
             店舗ステーションに <br />

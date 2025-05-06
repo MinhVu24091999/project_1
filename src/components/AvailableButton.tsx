@@ -13,7 +13,7 @@ const AvailableButton: FC<AvailableButtonProps> = ({
   return (
     <button
       className={clsx(
-        "relative px-8 sm:px-[94px] pt-[21px] pb-4 rounded-full bg-[#2DBF15] shadow-[0px 0px 20px 0px #21655F33;] flex flex-col items-center sm:gap-y-2 ",
+        "relative px-8 sm:px-[94px] pt-[21px] pb-4 rounded-full bg-[#2DBF15] shadow-[0px 0px 20px 0px #21655F33;] flex flex-col items-center sm:gap-y-2 hover:animate-ring",
         className
       )}
       {...otherProps}

@@ -21,6 +21,9 @@ const StoreStation = () => {
         />
 
         <p
+          data-aos="flip-right"
+          data-aos-duration="600"
+          data-aos-delay="400"
           className="px-4 sm:px-0 text-[52px] sm:text-[96px] font-black text-[#000000] text-center decoration-[22px] underline decoration-[#FFEE02] "
           style={{ textUnderlineOffset: "-16px" }}
         >
@@ -28,7 +31,12 @@ const StoreStation = () => {
           お任せください！
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center sm:items-end mt-10">
+        <div
+          className="flex flex-col sm:flex-row items-center sm:items-end mt-10 hover:animate-ring"
+          data-aos="zoom-out"
+          data-aos-duration="600"
+          data-aos-delay="700"
+        >
           <Image
             src={"/images/img-ceo.png"}
             alt=""

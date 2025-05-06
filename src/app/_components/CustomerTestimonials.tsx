@@ -84,6 +84,7 @@ const CustomerTestimonialsItem: React.FC<TestimonialBlockProps> = ({
       )}
     >
       <Image
+        data-aos="fade-down-right"
         src={imageSrc}
         alt={""}
         width={760}
@@ -96,6 +97,7 @@ const CustomerTestimonialsItem: React.FC<TestimonialBlockProps> = ({
         )}
       />
       <div
+        data-aos="fade-up-left"
         className={clsx(
           "p-4",
           "flex flex-col gap-y-5 sm:gap-y-10 justify-center",

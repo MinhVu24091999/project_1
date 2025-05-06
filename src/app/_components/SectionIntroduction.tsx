@@ -2,6 +2,7 @@
 import { ArrowDotIcon } from "@/assets/icons";
 import AvailableButton from "@/components/AvailableButton";
 import Marquee from "react-fast-marquee";
+import { TypeAnimation } from "react-type-animation";
 
 const SectionIntroduction = () => {
   return (
@@ -22,7 +23,12 @@ const SectionIntroduction = () => {
             />
           </Marquee>
 
-          <div className="flex flex-col gap-y-5 absolute left-4 sm:left-[60px] -bottom-[36px] z-10 animate-delay-[800ms] animate-fade-right animate-once animate-duration-200 animate-ease-in-out animate-fill-both">
+          <div
+            data-aos="flip-left"
+            data-aos-duration="500"
+            data-aos-delay="500"
+            className="flex flex-col gap-y-5 absolute left-4 sm:left-[60px] -bottom-[36px] z-[100]"
+          >
             <p className="text-xl sm:text-[50px] text-[#111111] font-bold p-2.5 rounded-[10px] bg-white leading-[100%]">
               飲食店舗の経営経験のある代表が
             </p>
@@ -48,13 +54,20 @@ const SectionIntroduction = () => {
 
       <div className="flex flex-col relative items-center mt-10 px-4 sm:px-0">
         <img
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          data-aos-delay="500"
           src="/images/restaurant_sales.png"
           alt="restaurant sales image"
           className="h-[63px] w-[412px]"
         />
-        <p className="text-[42px] sm:text-[84px] font-black text-[#111111] -mt-3">
-          店舗ステーション
-        </p>
+
+        <TypeAnimation
+          cursor={false}
+          className="text-[42px] sm:text-[84px] font-black text-[#111111] -mt-3"
+          sequence={["店舗ステーション"]}
+          speed={40}
+        />
       </div>
 
       <div className="flex flex-col relative mb-[26px]">

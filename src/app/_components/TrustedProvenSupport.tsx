@@ -1,6 +1,7 @@
 import { HomeIcon, Top10Icon, TwoPeopleIcon } from "@/assets/icons";
 import Image from "next/image";
-import React, { ComponentPropsWithoutRef, FC, ReactNode } from "react";
+import React, { ComponentPropsWithRef, FC, ReactNode } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const TrustedProvenSupport = () => {
   return (
@@ -11,6 +12,9 @@ const TrustedProvenSupport = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-[80px] gap-y-10 ">
         <TrustedProvenSupportItem
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="300"
           label={
             <span>
               <p className="inline-block text-[32px] text-[#FFEE02]">
@@ -26,6 +30,9 @@ const TrustedProvenSupport = () => {
           <TwoPeopleIcon />
         </TrustedProvenSupportItem>
         <TrustedProvenSupportItem
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="600"
           label={
             <span>
               飲食店経営
@@ -39,6 +46,9 @@ const TrustedProvenSupport = () => {
           <HomeIcon />
         </TrustedProvenSupportItem>
         <TrustedProvenSupportItem
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="900"
           label={
             <span>
               <p className="inline-block text-[32px] text-[#FFEE02]">
@@ -55,7 +65,13 @@ const TrustedProvenSupport = () => {
         </TrustedProvenSupportItem>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center gap-x-[61px] max-w-[1148px] sm:mt-[56px] gap-y-8">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="900"
+        data-aos-anchor-placement="top-bottom"
+        className="flex flex-col sm:flex-row items-center gap-x-[61px] max-w-[1148px] sm:mt-[56px] gap-y-8"
+      >
         <Image
           src={"/images/img-ceo-2.png"}
           alt=""
@@ -94,21 +110,28 @@ const TrustedProvenSupportItem: FC<TrustedProvenSupportItemProps> = ({
   children,
   label,
   description,
+  ...otherProps
 }) => {
   return (
-    <div className="flex flex-col gap-y-10 items-center max-w-[340px]">
+    <div
+      className="flex flex-col gap-y-10 items-center max-w-[340px]"
+      {...otherProps}
+    >
       <div className="w-[340px] h-[340px] rounded-full border-[21px] border-[#9FF0D9] bg-[#1EA68B] flex flex-col items-center justify-center gap-y-5">
         <div className="w-[100px] h-[100px]">{children}</div>
         <div className="max-w-[168px] text-[28px] text-center">{label}</div>
       </div>
 
-      <p className="text-xl text-[#000000]">{description}</p>
+      <TypeAnimation
+        className="text-xl text-[#000000]"
+        sequence={[description]}
+        cursor={false}
+      />
     </div>
   );
 };
 
-interface TrustedProvenSupportItemProps
-  extends ComponentPropsWithoutRef<"div"> {
+interface TrustedProvenSupportItemProps extends ComponentPropsWithRef<"div"> {
   label: ReactNode;
   description: string;
 }
