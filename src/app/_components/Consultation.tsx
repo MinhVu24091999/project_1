@@ -1,10 +1,14 @@
 import AvailableButton from "@/components/AvailableButton";
+import clsx from "clsx";
 import Image from "next/image";
-import React from "react";
+import React, { ComponentPropsWithoutRef, FC } from "react";
 
-const Consultation = () => {
+const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
+  className,
+  ...otherProps
+}) => {
   return (
-    <div className="relative mt-[100px]">
+    <div className={clsx("relative", className)} {...otherProps}>
       <Image
         src={"/images/consultation-bg.png"}
         alt=""
@@ -25,7 +29,7 @@ const Consultation = () => {
           <Image
             src={"/images/bubble-consultation.png"}
             alt=""
-            className="rounded-full absolute left-10 sm:left-0 -translate-x-1/2 bottom-1/2"
+            className="rounded-full absolute left-10 sm:left-[14%] -translate-x-1/2 bottom-1/2 sm:bottom-[38%]"
             width={178}
             height={125}
           />

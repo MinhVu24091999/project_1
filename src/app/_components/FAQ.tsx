@@ -75,7 +75,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-10 items-center max-w-[1440px] px-4 sm:px-10 mx-auto">
+    <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-10 items-center max-w-[1440px] px-4 sm:px-10 mx-auto mb-10 sm:mb-[100px]">
       <p className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center leading-[100%]">
         よくある質問
       </p>
