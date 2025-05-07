@@ -128,13 +128,13 @@ const Header = () => {
           </Link>
 
           <div className="mt-auto flex flex-col gap-y-5">
-            <button className="flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full  bg-[#2DBF15] w-full min-h-[54px]">
+            <button className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full  bg-[#2DBF15] w-full min-h-[54px]">
               <LineIcon />
               LINEでお問い合わせ
             </button>
 
-            <button className="flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full bg-[#174A42] w-full min-h-[54px]">
-              <EmailIcon className="w-[23px] h-[18px]" />
+            <button className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full bg-[#174A42] w-full min-h-[54px]">
+              <EmailIcon className="w-[23px] h-[18px] " />
               メールでお問い合わせ
             </button>
           </div>
