@@ -1,28 +1,32 @@
+"use client";
+
+import useWindowSize from "@/hooks/useWindowSize";
 import clsx from "clsx";
 import Image from "next/image";
 import React, { FC } from "react";
-import Marquee from "react-fast-marquee";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const StoreStationFeatures = () => {
+  const { windowWidth } = useWindowSize();
   return (
     <div className="mt-[60px] sm:mt-[160px] flex flex-col gap-y-[40px] sm:gap-y-[80px] items-center">
       <p className="font-bold text-3xl sm:text-[64px] text-[#000000] text-center leading-[130%]">
         だから選ばれる！ <br /> 店舗ステーションの特徴
       </p>
       <div className="py-[80px] w-full bg-[#F1FCF9] ">
-        <div className="max-w-[1440px] mx-auto">
-          <Marquee direction="right">
-            <div className="grid grid-cols-4 gap-x-5 w-fit mr-5">
-              {DATA.map((item, index) => (
+        <div className="sm:max-w-[1440px] overflow-hidden mx-4 sm:mx-auto">
+          <Swiper spaceBetween={20} slidesPerView={windowWidth <= 640 ? 1 : 3}>
+            {DATA.map((item, index) => (
+              <SwiperSlide key={index}>
                 <StoreStationFeaturesCard
                   key={index}
                   content={item.content}
                   imgUrl={item.imgUrl}
                   label={item.label}
                 />
-              ))}
-            </div>
-          </Marquee>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
@@ -45,7 +49,7 @@ const StoreStationFeaturesCard: FC<StoreStationFeaturesCardProps> = ({
   className,
 }) => {
   return (
-    <div className="text-[#000000] flex flex-col items-center gap-y-[43px] bg-white rounded-[20px] p-4 w-[420px]">
+    <div className="text-[#000000] flex flex-col items-center gap-y-[43px] bg-white rounded-[20px] p-4 w-[320px] sm:w-[420px] h-[540px] sm:h-[638px]">
       <Image
         src={imgUrl}
         alt=""

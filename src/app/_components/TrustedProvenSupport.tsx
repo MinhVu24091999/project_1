@@ -10,7 +10,7 @@ const TrustedProvenSupport = () => {
         信頼と実績のサポート
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-[80px] gap-y-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-[80px] gap-y-10 mb-12 sm:mb-0">
         <TrustedProvenSupportItem
           data-aos="fade-left"
           data-aos-duration="800"
@@ -73,7 +73,7 @@ const TrustedProvenSupport = () => {
         className="flex flex-col sm:flex-row items-center gap-x-[61px] max-w-[1148px] sm:mt-[56px] gap-y-8"
       >
         <Image
-          src={"/images/img-ceo-2.png"}
+          src={"/images/img-ceo-6.png"}
           alt=""
           width={404}
           height={511}

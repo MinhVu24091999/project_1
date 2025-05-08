@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowDotIcon } from "@/assets/icons";
 import AvailableButton from "@/components/AvailableButton";
+import RestaurantDeal from "@/components/RestaurantDeal";
 import Marquee from "react-fast-marquee";
-import { TypeAnimation } from "react-type-animation";
 
 const SectionIntroduction = () => {
   return (
@@ -10,26 +10,50 @@ const SectionIntroduction = () => {
       <img
         src="/images/bg-introduction.png"
         alt="intro image"
-        className="absolute h-[1080px] min-w-[1676px] w-full top-0 sm:-mt-[72px]"
+        className="absolute h-[500px] sm:h-[1080px] sm:min-w-[1676px] w-full top-0 sm:-mt-[72px]"
       />
 
       <div className="flex flex-col items-center pt-5">
         <div className="relative">
-          <Marquee direction="right" className="h-[680px]">
+          <Marquee direction="left" className="h-[450px] sm:h-[680px]">
             <img
-              src="/images/slide-introduction.png"
+              src="/images/img-intro-1.png"
               alt=""
-              className="h-[680px] w-[4140px] mr-5"
+              className="h-[450px] sm:h-[680px] w-[293px] sm:w-[440px] mr-5"
             />
+            <img
+              src="/images/img-intro-2.png"
+              alt=""
+              className="h-[450px] sm:h-[680px] w-[293px] sm:w-[440px] mr-5"
+            />
+            <img
+              src="/images/img-intro-3.png"
+              alt=""
+              className="h-[450px] sm:h-[680px] w-[293px] sm:w-[440px] mr-5"
+            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5"
+            >
+              <source src="/videos/video-intro.mp4" type="video/mp4" />
+            </video>
+            {/* <img
+              src="/images/img-intro-4.png"
+              alt=""
+              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5"
+            /> */}
           </Marquee>
 
           <div
             data-aos="flip-left"
             data-aos-duration="500"
             data-aos-delay="500"
-            className="flex flex-col gap-y-5 absolute left-4 sm:left-[60px] -bottom-[36px] z-[100]"
+            className="flex flex-col gap-y-5 absolute left-4 sm:left-1/2 sm:!-translate-x-1/2 -bottom-[36px] z-[100] sm:w-[1440px] sm:ml-[60px]"
           >
-            <p className="text-xl sm:text-[50px] text-[#111111] font-bold p-2.5 rounded-[10px] bg-white leading-[100%]">
+            <p className="text-xl sm:text-[50px] text-[#111111] font-bold p-2.5 rounded-[10px] bg-white leading-[100%] w-fit">
               飲食店舗の経営経験のある代表が
             </p>
             <p className="text-xl sm:text-[50px] text-[#111111] font-bold p-2.5 rounded-[10px] bg-white w-fit leading-[100%]">
@@ -53,21 +77,15 @@ const SectionIntroduction = () => {
       </div>
 
       <div className="flex flex-col relative items-center mt-10 px-4 sm:px-0">
-        <img
+        <RestaurantDeal
           data-aos="zoom-in"
           data-aos-duration="500"
           data-aos-delay="500"
-          src="/images/restaurant_sales.png"
-          alt="restaurant sales image"
-          className="h-[63px] w-[412px]"
         />
 
-        <TypeAnimation
-          cursor={false}
-          className="text-[42px] sm:text-[84px] font-black text-[#111111] -mt-3"
-          sequence={["店舗ステーション"]}
-          speed={40}
-        />
+        <p className="text-[42px] sm:text-[84px] font-black text-[#111111] -mt-3">
+          店舗ステーション
+        </p>
       </div>
 
       <div className="flex flex-col relative mb-[26px]">

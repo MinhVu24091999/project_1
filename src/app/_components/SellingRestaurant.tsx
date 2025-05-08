@@ -96,7 +96,7 @@ const SellingRestaurantCard: FC<SellingRestaurantCardProps> = ({
         alt=""
         width={213}
         height={180}
-        className="absolute bottom-0 right-6"
+        className="absolute bottom-0 right-6 -z-[1]"
       />
     </div>
   );

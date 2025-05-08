@@ -27,7 +27,7 @@ const Footer = () => {
             className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15] text-white"
           >
             <LineIcon />
-            でお問い合わせ
+            お問い合わせ
           </Link>
         </div>
       </div>

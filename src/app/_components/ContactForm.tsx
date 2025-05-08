@@ -23,7 +23,7 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
         お問い合わせフォーム
       </p>
       <p className="text-sm sm:text-base max-w-[460px]">
-        現在の状況や課題など、できるだけ詳しくお教えください。
+        状況に合わせて最適なご提案ができるよう、検討いたします。
       </p>
       <div className="h-[1px] w-full bg-[#E0E0E0]" />
 
@@ -106,7 +106,7 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
           ]}
         >
           <TextArea
-            rootClassName="!h-[500px] !py-[20px] !bg-[#F1FCF9]"
+            rootClassName="!h-[250px] sm:!h-[500px] !py-[20px] !bg-[#F1FCF9]"
             style={{ resize: "none" }}
           />
         </Form.Item>

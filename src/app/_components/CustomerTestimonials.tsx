@@ -9,13 +9,12 @@ const CustomerTestimonials = () => {
         お客様の声
       </p>
 
-      <div className="flex flex-col sm:gap-y-[100px]">
+      <div className="flex flex-col gap-y-5 sm:gap-y-[100px] px-4 sm:px-0 w-full">
         <CustomerTestimonialsItem
           imageSrc="/images/customer_testimonials_1.png"
           description="業界歴が長く、その経験を通して様々なノウハウを持っている担当が取引前後もしっかりサポートいたします。"
           label="のおかげで安心して取引できました！"
           hightLightText="アドバイス"
-          className="sm:pl-[184px]"
           labelClassName="sm:max-w-[471px]"
           descriptionClassName="sm:max-w-[365px]"
         />
@@ -25,7 +24,7 @@ const CustomerTestimonials = () => {
           description="飲食業界を経験してきた担当だからこそできる、細かな気遣いがあります。店舗の売買だけでなく他の課題もぜひお話しください。"
           label="だから話しやすかったです。"
           hightLightText="業界の経験者"
-          className="sm:pl-[184px]"
+          className="sm:pr-[207px] sm:justify-end"
           labelClassName="sm:max-w-[409px]"
           descriptionClassName="sm:max-w-[409px]"
         />
@@ -44,7 +43,7 @@ const CustomerTestimonials = () => {
           description="店舗の売買からが本当のスタートです。その後の開業支援や資金調達など、安心して事業を続けられるようサポートいたします。"
           label="も親身に聞いてもらえました。"
           hightLightText="次に向けた経営相談"
-          className="sm:pl-[164px]"
+          className="sm:pr-[124px] sm:justify-end"
           labelClassName="sm:max-w-[509px]"
           descriptionClassName="sm:max-w-[509px]"
         />
@@ -77,12 +76,7 @@ const CustomerTestimonialsItem: React.FC<TestimonialBlockProps> = ({
   reverse = false,
 }) => {
   return (
-    <div
-      className={clsx(
-        "flex flex-col sm:flex-row",
-        reverse && "sm:flex-row-reverse"
-      )}
-    >
+    <div className={clsx("w-full", "grid grid-cols-1 sm:grid-cols-2 ")}>
       <Image
         data-aos="fade-down-right"
         src={imageSrc}
@@ -90,34 +84,41 @@ const CustomerTestimonialsItem: React.FC<TestimonialBlockProps> = ({
         width={760}
         height={500}
         className={clsx(
-          "z-10 sm:mb-[60px] w-full h-full sm:w-[760px] sm:h-[500px]",
+          "z-10 sm:mb-[60px] w-full h-full sm:w-[760px] sm:h-[500px] rounded-[30px]",
           reverse
-            ? "sm:rounded-l-[30px] sm:-ml-20"
-            : "sm:rounded-r-[30px] sm:-mr-20"
+            ? "sm:order-2 sm:rounded-l-[30px] sm:-ml-20"
+            : "sm:order-1 sm:rounded-r-[30px] sm:-mr-20 sm:ml-auto"
         )}
       />
       <div
         data-aos="fade-up-left"
         className={clsx(
-          "p-4",
-          "flex flex-col gap-y-5 sm:gap-y-10 justify-center",
-          "w-full h-full sm:w-[800px] sm:h-[500px] bg-[#CFF8EB]  sm:mt-[60px]",
-          reverse ? "sm:rounded-r-[30px]" : "sm:rounded-l-[30px]",
+          "w-full",
+          "p-4 pt-12 -mt-6 sm:px-[184px] sm:pt-4",
+          "flex items-center",
+          "w-full h-full sm:h-[500px] bg-[#CFF8EB]  sm:mt-[60px] ml-auto",
+          reverse
+            ? " sm:order-1 sm:rounded-r-[30px]"
+            : "sm:order-2 sm:rounded-l-[30px]",
           className
         )}
       >
-        <span
-          className={clsx(
-            "text-2xl sm:text-[36px] font-bold text-[#000000] text-center sm:text-start leading-[130%]",
-            labelClassName
-          )}
-        >
-          <p className="text-[#1EA68B] inline-block">{hightLightText} </p>{" "}
-          {label}
-        </span>
-        <p className={clsx("sm:text-xl text-[#000000]", descriptionClassName)}>
-          {description}
-        </p>
+        <div className="flex flex-col gap-y-5 sm:gap-y-10">
+          <span
+            className={clsx(
+              "text-2xl sm:text-[36px] font-bold text-[#000000] text-center sm:text-start leading-[130%]",
+              labelClassName
+            )}
+          >
+            <p className="text-[#1EA68B] inline-block">{hightLightText} </p>{" "}
+            {label}
+          </span>
+          <p
+            className={clsx("sm:text-xl text-[#000000]", descriptionClassName)}
+          >
+            {description}
+          </p>
+        </div>
       </div>
     </div>
   );

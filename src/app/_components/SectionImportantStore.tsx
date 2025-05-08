@@ -16,14 +16,14 @@ const SectionImportantStore = () => {
         売却も視野に入ってきた…
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-4 sm:h-[497px] gap-3">
+      <div className="flex flex-col items-center sm:flex-row sm:h-[497px] gap-y-3">
         <Image
           data-aos="fade-right"
           data-aos-duration="300"
           data-aos-delay="200"
           src="/images/important_store_1.png"
           alt=""
-          className="h-full"
+          className="h-full !w-[289px]"
           width={290}
           height={497}
         />
@@ -33,8 +33,8 @@ const SectionImportantStore = () => {
           data-aos-delay="200"
           src="/images/important_store_2.png"
           alt=""
-          className="h-full"
-          width={290}
+          className="h-full !w-[320px] !mr-[30px]"
+          width={320}
           height={497}
         />
         <Image
@@ -43,8 +43,8 @@ const SectionImportantStore = () => {
           data-aos-delay="200"
           src="/images/important_store_3.png"
           alt=""
-          className="h-full"
-          width={290}
+          className="h-full !w-[327px]"
+          width={327}
           height={497}
         />
         <Image
@@ -53,8 +53,8 @@ const SectionImportantStore = () => {
           data-aos-delay="200"
           src="/images/important_store_4.png"
           alt=""
-          className="h-full"
-          width={290}
+          className="h-full !w-[305px]"
+          width={305}
           height={497}
         />
       </div>

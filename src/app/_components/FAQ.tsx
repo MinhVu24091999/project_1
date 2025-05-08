@@ -32,8 +32,8 @@ const QuestionItem = ({
           className={clsx(
             "w-[28px] h-[28px] sm:w-[48px] sm:h-[48px]",
             "text-[#1EA68B]",
-            "cursor-pointer",
-            isOpen ? "rotate-180 transition-all" : ""
+            "cursor-pointer rotate-180",
+            isOpen ? "transition-all rotate-0" : ""
           )}
         />
       </div>

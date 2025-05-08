@@ -52,17 +52,19 @@ const Header = () => {
               >
                 会社概要
               </Link>
+
+              <div className="flex items-center gap-x-5">
+                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]">
+                  <LineIcon />
+                  LINEでお問い合わせ
+                </button>
+
+                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#174A42]">
+                  <EmailIcon className="w-[23px] h-[18px]" />
+                  メールでお問い合わせ
+                </button>
+              </div>
             </div>
-
-            <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]">
-              <LineIcon />
-              LINEでお問い合わせ
-            </button>
-
-            <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#174A42]">
-              <EmailIcon className="w-[23px] h-[18px]" />
-              メールでお問い合わせ
-            </button>
           </div>
 
           <div

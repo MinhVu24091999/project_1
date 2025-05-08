@@ -24,7 +24,7 @@ const StoreStation = () => {
           data-aos="flip-right"
           data-aos-duration="600"
           data-aos-delay="400"
-          className="px-4 sm:px-0 text-[52px] sm:text-[96px] font-black text-[#000000] text-center decoration-[22px] underline decoration-[#FFEE02] "
+          className="px-4 sm:px-0 text-[38px] sm:text-[96px] font-black text-[#000000] text-center decoration-[18px] sm:decoration-[22px] underline decoration-[#FFEE02] "
           style={{ textUnderlineOffset: "-16px" }}
         >
           店舗ステーションに <br />
@@ -37,20 +37,25 @@ const StoreStation = () => {
           data-aos-duration="600"
           data-aos-delay="700"
         >
-          <Image
-            src={"/images/img-ceo.png"}
-            alt=""
-            width={485}
-            height={405}
-            className="-mr-[70px] z-10"
-          />
+          <div className="-mr-[70px] z-10 flex flex-col sm:gap-y-2 items-center sm:-mb-[54px]">
+            <Image
+              src={"/images/img-ceo-7.png"}
+              alt=""
+              width={485}
+              height={405}
+              className="w-[300px] sm:!w-[485px] sm:h-[405px] max-w-[485px]"
+            />
 
-          <div className="flex flex-col py-10  bg-white rounded-[30px] gap-y-[37px] text-[#000000] sm:min-w-[633px]">
-            <p className="text-3xl sm:text-[32px] font-bold text-center px-[30px]">
-              飲食店25店舗を経営してきた 代表が、直接あなたを担当いたします。
+            <p className="text-xl text-[#000000]">代表取締役　武藤 進哉</p>
+          </div>
+
+          <div className="flex flex-col py-5 sm:py-10  bg-white rounded-[30px] gap-y-5 sm:gap-y-[37px] text-[#000000] sm:min-w-[633px] mx-4 sm:mx-0 sm:mt-0">
+            <p className="text-3xl sm:text-[32px] font-bold text-center px-4 sm:px-[30px] leading-[150%]">
+              飲食店25店舗を経営してきた <br />{" "}
+              代表が、直接あなたを担当いたします。
             </p>
 
-            <p className="sm:text-xl px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full leading-[200%]">
+            <p className="sm:text-xl px-5 sm:px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full leading-[240%]">
               飲食店経営の10年以上の経験や、これまでのお取引で培ったノウハウがあります。
               <br />
               ただの飲食店売買にとどまらず、様々なお悩みをプロに相談できるのが

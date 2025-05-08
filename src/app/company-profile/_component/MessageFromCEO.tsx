@@ -17,7 +17,7 @@ const MessageFromCEO = () => {
         <div className="relative grid grid-cols-1 sm:grid-cols-[36%_58%] gap-x-[70px] max-w-[1261px] mx-auto py-10 sm:py-[151px] px-4 sm:px-0 items-center sm:items-start gap-y-8">
           <div className="flex flex-col gap-y-[15px] items-center w-[250px] sm:w-[450px] mx-auto">
             <Image
-              src={"/images/img-ceo-4.png"}
+              src={"/images/img-ceo-8.png"}
               alt=""
               className="rounded-[30px] w-[250px] h-[250px] sm:w-[450px] sm:h-[360px]"
               width={450}
