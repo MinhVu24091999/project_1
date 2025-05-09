@@ -12,6 +12,7 @@ const QuestionItem = ({
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
+      id="faq-section"
       data-aos="fade-up"
       data-aos-duration="1000"
       className="w-full bg-white py-6 md:py-11 px-4 md:px-[30px] border border-[#1EA68B] rounded-[20px]"
@@ -81,8 +82,8 @@ const FAQ = () => {
       </p>
 
       <div className="flex flex-wrap items-center gap-5 md:gap-[46px] max-w-[920px] mx-auto rounded-[20px]">
-        {QUESTIONS.map((item) => (
-          <QuestionItem key={item?.question} item={item} />
+        {QUESTIONS.map((item, index) => (
+          <QuestionItem key={index} item={item} />
         ))}
       </div>
     </div>

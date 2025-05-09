@@ -1,6 +1,7 @@
 import { PolygonIcon } from "@/assets/icons";
 import clsx from "clsx";
-import React, { ComponentPropsWithoutRef, FC } from "react";
+import React, { ComponentPropsWithRef, FC } from "react";
+import { twMerge } from "tailwind-merge";
 
 const AvailableButton: FC<AvailableButtonProps> = ({
   className,
@@ -12,7 +13,7 @@ const AvailableButton: FC<AvailableButtonProps> = ({
 }) => {
   return (
     <button
-      className={clsx(
+      className={twMerge(
         "relative px-8 sm:px-[94px] pt-[21px] pb-4 rounded-full bg-[#2DBF15] shadow-[0px 0px 20px 0px #21655F33;] flex flex-col items-center sm:gap-y-2 hover:animate-ring",
         className
       )}
@@ -56,7 +57,7 @@ const AvailableButton: FC<AvailableButtonProps> = ({
 
 export default AvailableButton;
 
-interface AvailableButtonProps extends ComponentPropsWithoutRef<"button"> {
+interface AvailableButtonProps extends ComponentPropsWithRef<"button"> {
   labelClassName?: string;
   contentClassName?: string;
   wrapperLabel?: string;

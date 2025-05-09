@@ -5,13 +5,13 @@ import React from "react";
 const MessageFromCEO = () => {
   return (
     <div>
-      <div className="relative">
+      <div className="relative bg-[#1EA68B]">
         <Image
-          src={"/images/representative-bg.png"}
+          src={"/images/deco-1.png"}
           alt=""
-          className="absolute w-full h-full"
-          width={1440}
-          height={600}
+          className="absolute h-full left-0 top-0 hidden sm:block"
+          width={597}
+          height={597}
         />
 
         <div className="relative grid grid-cols-1 sm:grid-cols-[36%_58%] gap-x-[70px] max-w-[1261px] mx-auto py-10 sm:py-[151px] px-4 sm:px-0 items-center sm:items-start gap-y-8">

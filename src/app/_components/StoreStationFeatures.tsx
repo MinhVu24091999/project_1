@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import React, { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const StoreStationFeatures = () => {
   const { windowWidth } = useWindowSize();
@@ -15,9 +16,13 @@ const StoreStationFeatures = () => {
       </p>
       <div className="py-[80px] w-full bg-[#F1FCF9] ">
         <div className="sm:max-w-[1440px] overflow-hidden mx-4 sm:mx-auto">
-          <Swiper spaceBetween={20} slidesPerView={windowWidth <= 640 ? 1 : 3}>
+          <Swiper
+            loop
+            spaceBetween={20}
+            slidesPerView={windowWidth <= 640 ? 1 : 3}
+          >
             {DATA.map((item, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="sm:!w-fit">
                 <StoreStationFeaturesCard
                   key={index}
                   content={item.content}
@@ -49,7 +54,7 @@ const StoreStationFeaturesCard: FC<StoreStationFeaturesCardProps> = ({
   className,
 }) => {
   return (
-    <div className="text-[#000000] flex flex-col items-center gap-y-[43px] bg-white rounded-[20px] p-4 w-[320px] sm:w-[420px] h-[540px] sm:h-[638px]">
+    <div className="text-[#000000] flex flex-col items-center gap-y-[43px] bg-white rounded-[20px] p-4 w-full sm:w-[420px] h-[540px] sm:h-[638px]">
       <Image
         src={imgUrl}
         alt=""

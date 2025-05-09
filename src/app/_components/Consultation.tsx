@@ -9,17 +9,20 @@ const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
   ...otherProps
 }) => {
   return (
-    <div className={clsx("relative", className)} {...otherProps}>
+    <div
+      className={clsx("relative sm:bg-[#9FF0D9]", className)}
+      {...otherProps}
+    >
       <Image
-        src={"/images/consultation-bg.png"}
+        src={"/images/deco.png"}
         alt=""
-        className="absolute w-full h-full hidden sm:block"
-        width={1440}
-        height={598}
+        className="absolute h-full left-0 top-0 hidden sm:block"
+        width={597}
+        height={597}
       />
 
-      <div className="flex flex-col sm:flex-row items-center gap-x-[82px] gap-y-5 sm:gap-y-10 relative max-w-[1032px] mx-auto py-[60px] sm:pt-[114px] sm:pb-[123px]">
-        <div className="relative w-full py-10 flex items-center">
+      <div className="flex flex-col sm:flex-row items-center gap-x-[82px] gap-y-5 sm:gap-y-10 relative max-w-[1032px] mx-auto py-[60px] sm:pt-[114px] sm:pb-[123px] ">
+        <div className="relative w-full py-10 sm:py-0 flex items-center">
           <Image
             src={"/images/consultation-bg.png"}
             alt=""

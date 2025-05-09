@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import { ArrowDotIcon } from "@/assets/icons";
 import AvailableButton from "@/components/AvailableButton";
 import RestaurantDeal from "@/components/RestaurantDeal";
@@ -36,15 +38,10 @@ const SectionIntroduction = () => {
               loop
               muted
               playsInline
-              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5"
+              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5 object-cover"
             >
               <source src="/videos/video-intro.mp4" type="video/mp4" />
             </video>
-            {/* <img
-              src="/images/img-intro-4.png"
-              alt=""
-              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5"
-            /> */}
           </Marquee>
 
           <div
@@ -94,7 +91,7 @@ const SectionIntroduction = () => {
         <ArrowDotIcon className="-mt-4 w-20 h-[48px] animate-wave-3 opacity-100" />
       </div>
 
-      <AvailableButton />
+      <AvailableButton id="available-button-introduction" />
     </div>
   );
 };

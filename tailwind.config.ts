@@ -44,6 +44,20 @@ export default {
           "0%, 100%": { transform: "scale(1)", opacity: "1" },
           "50%": { transform: "scale(1.2)", opacity: "0.9" },
         },
+        fadeIn: {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-50%) translateY(50px)",
+          },
+          "100%": { opacity: "1", transform: "translateX(-50%) translateY(0)" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1", transform: "translateX(-50%) translateY(0)" },
+          "100%": {
+            opacity: "0",
+            transform: "translateX(-50%) translateY(50px)",
+          },
+        },
       },
       animation: {
         "wave-1": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
@@ -51,6 +65,8 @@ export default {
         "wave-3": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.4s",
         ring: "ring 0.6s ease-in-out",
         zoomLoop: "zoomLoop 1.5s ease-in-out infinite",
+        fadeIn: "fadeIn 0.5s ease-in forwards",
+        fadeOut: "fadeOut 0.5s ease-out forwards",
       },
     },
     screens: {
