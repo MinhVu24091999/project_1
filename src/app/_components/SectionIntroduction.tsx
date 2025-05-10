@@ -12,7 +12,7 @@ const SectionIntroduction = () => {
       <img
         src="/images/bg-introduction.png"
         alt="intro image"
-        className="absolute h-[500px] sm:h-[1080px] sm:min-w-[1676px] w-full top-0 sm:-mt-[72px]"
+        className="absolute h-[686px] sm:h-[1080px] min-w-[1676px] w-full top-0 sm:-mt-[72px]"
       />
 
       <div className="flex flex-col items-center pt-5">
@@ -91,7 +91,15 @@ const SectionIntroduction = () => {
         <ArrowDotIcon className="-mt-4 w-20 h-[48px] animate-wave-3 opacity-100" />
       </div>
 
-      <AvailableButton id="available-button-introduction" />
+      <AvailableButton
+        id="available-button-introduction"
+        onClick={() =>
+          window.open(
+            "https://line.me/R/ti/p/@042qotud?ts=04301146&oat_content=url",
+            "_blank"
+          )
+        }
+      />
     </div>
   );
 };

@@ -25,11 +25,11 @@ export default function HomePage() {
 
       if (!faqSection || !availableButtonIntroduction) return;
 
-      const faqPosition = faqSection.getBoundingClientRect().top;
+      const faqPosition = faqSection.getBoundingClientRect().bottom;
       const introductionPosition =
         availableButtonIntroduction.getBoundingClientRect().top;
 
-      if (introductionPosition < 0 && faqPosition > window.innerHeight) {
+      if (introductionPosition < 0 && faqPosition > 0) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -39,8 +39,6 @@ export default function HomePage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  console.log("isVisible", isVisible);
 
   return (
     <div>
@@ -62,6 +60,8 @@ export default function HomePage() {
           "!fixed !bottom-10 !left-1/2 !z-[1000] !transition-all !duration-500",
           isVisible ? "!animate-fadeIn" : "!animate-fadeOut pointer-events-none"
         )}
+        labelClassName="text-lg"
+        contentClassName="text-xl"
       />
     </div>
   );

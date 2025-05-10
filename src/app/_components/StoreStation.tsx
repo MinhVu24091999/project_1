@@ -55,8 +55,9 @@ const StoreStation = () => {
               代表が、直接あなたを担当いたします。
             </p>
 
-            <p className="sm:text-xl px-5 sm:px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full leading-[240%]">
-              飲食店経営の10年以上の経験や、これまでのお取引で培ったノウハウがあります。
+            <p className="sm:text-xl px-5 sm:px-[46px] underline decoration-dashed decoration-[#999999] underline-offset-4 w-full !leading-[200%]">
+              飲食店経営の10年以上の経験や、これまでのお取引で培った <br />
+              ノウハウがあります。
               <br />
               ただの飲食店売買にとどまらず、様々なお悩みをプロに相談できるのが
               <p className="font-black inline-block underline decoration-dashed decoration-[#999999] px-1.5 underline-offset-4">

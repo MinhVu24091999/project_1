@@ -5,20 +5,20 @@ import React from "react";
 const SectionRepresentative = () => {
   return (
     <div>
-      <div className="relative">
+      <div className="relative bg-[#1EA68B]">
         <Image
-          src={"/images/representative-bg.png"}
+          src={"/images/deco-1.png"}
           alt=""
-          className="absolute w-full h-full"
-          width={1440}
-          height={600}
+          className="absolute h-full left-0 top-0 hidden sm:block"
+          width={597}
+          height={597}
         />
 
         <div className="relative flex flex-col sm:flex-row gap-x-[70px] max-w-[1261px] mx-auto py-10 sm:py-[151px] px-4 sm:px-0 items-center sm:items-start gap-y-8">
           <Image
             src={"/images/img-ceo-3.png"}
             alt=""
-            className="rounded-[30px] w-[250px] h-[250px] sm:w-[450px] sm:h-[360px]"
+            className="rounded-[30px] w-[300px] h-[240px] sm:w-[450px] sm:h-[360px]"
             width={450}
             height={360}
           />
@@ -31,7 +31,7 @@ const SectionRepresentative = () => {
               代表が担当する <br /> 唯一無二のサービス
             </p>
 
-            <p className="sm:text-2xl mb-[30px] leading-[100%]">
+            <p className="text-lg sm:text-2xl mb-[30px] leading-[180%]">
               様々な状態の店舗オーナー様に向けて、幅広いサポートができます。
             </p>
 

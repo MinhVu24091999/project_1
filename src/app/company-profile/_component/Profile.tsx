@@ -76,12 +76,12 @@ const ProfileItem: FC<ProfileItemProps> = ({
   return (
     <div
       className={clsx(
-        "grid grid-cols-[40%_60%] text-[#000000] py-5 border-b border-[#CDCDCD]",
+        "grid grid-cols-[28%_72%] sm:grid-cols-[40%_60%] text-[#000000] py-5 border-b border-[#CDCDCD]",
         className
       )}
       {...otherProps}
     >
-      <p>{label}</p>
+      <p className="text-end mr-5 sm:text-start">{label}</p>
       <span className="text-lg">{children}</span>
     </div>
   );

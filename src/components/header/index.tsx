@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import clsx from "clsx";
 import { EmailIcon, LineIcon } from "@/assets/icons";
 import { PATH_ROUTER } from "@/const/path.const";
@@ -11,6 +11,7 @@ import { useState } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 
 const Header = () => {
+  const router = useRouter();
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -54,7 +55,15 @@ const Header = () => {
               </Link>
 
               <div className="flex items-center gap-x-5">
-                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]">
+                <button
+                  className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]"
+                  onClick={() =>
+                    window.open(
+                      "https://line.me/R/ti/p/@042qotud?ts=04301146&oat_content=url",
+                      "_blank"
+                    )
+                  }
+                >
                   <LineIcon />
                   LINEでお問い合わせ
                 </button>
@@ -135,7 +144,10 @@ const Header = () => {
               LINEでお問い合わせ
             </button>
 
-            <button className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full bg-[#174A42] w-full min-h-[54px]">
+            <button
+              className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full bg-[#174A42] w-full min-h-[54px]"
+              onClick={() => router.push(PATH_ROUTER.CONTACT)}
+            >
               <EmailIcon className="w-[23px] h-[18px] " />
               メールでお問い合わせ
             </button>

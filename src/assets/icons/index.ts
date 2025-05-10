@@ -1,5 +1,5 @@
 import LineIcon from "./LineIcon.svg";
-import ArrowUpIcon from "./ArrowUpIcon.svg";
+import ArrowUpIcon from "./ArrowUpIcon";
 import EmailIcon from "./EmailIcon.svg";
 import PolygonIcon from "./PolygonIcon";
 import ArrowDotIcon from "./ArrowDotIcon.svg";

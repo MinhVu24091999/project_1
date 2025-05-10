@@ -1,8 +1,9 @@
 import { IServiceOverviewDetail } from "@/types";
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { ComponentPropsWithoutRef, FC } from "react";
 
 const ServiceOverviewCard: FC<ServiceOverviewCard> = ({
+  children,
   serviceOverviewDetail,
 }) => {
   return (
@@ -21,29 +22,26 @@ const ServiceOverviewCard: FC<ServiceOverviewCard> = ({
             {serviceOverviewDetail.title}
           </p>
 
-          <p className="text-sm sm:text-lg font-semibold leading-[150%]">
+          <p className="text-sm sm:text-base font-medium leading-[150%]">
             {serviceOverviewDetail.description}
           </p>
         </div>
 
-        <div className="flex flex-col gap-y-5 font-bold">
-          <p className="text-lg sm:text-3xl leading-[130%]">
-            {serviceOverviewDetail.title1}
-          </p>
-          <p className="sm:text-xl leading-[130%]">
-            {serviceOverviewDetail.title2}
-          </p>
+        <div className="flex flex-col gap-y-5 font-medium text-sm sm:text-base">
+          {children}
         </div>
 
-        <div className="flex flex-col p-5 rounded-[20px] bg-[#F3F3F3] gap-y-5">
-          <p className="w-full text-lg sm:text-3xl font-bold leading-[130%]">
-            {serviceOverviewDetail.content.label}
-          </p>
-          <div className="w-full h-[1px] bg-[#333333]/20" />
-          <p className="text-sm sm:text-lg leading-[130%]">
-            {serviceOverviewDetail.content.contentDetail}
-          </p>
-        </div>
+        {serviceOverviewDetail?.content && (
+          <div className="flex flex-col p-5 rounded-[20px] bg-[#F3F3F3] gap-y-5">
+            <p className="w-full text-lg sm:text-3xl font-bold leading-[130%]">
+              {serviceOverviewDetail?.content?.label}
+            </p>
+            <div className="w-full h-[1px] bg-[#333333]/20" />
+            <p className="text-sm sm:text-lg leading-[130%]">
+              {serviceOverviewDetail?.content?.contentDetail}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -51,6 +49,6 @@ const ServiceOverviewCard: FC<ServiceOverviewCard> = ({
 
 export default ServiceOverviewCard;
 
-interface ServiceOverviewCard {
+interface ServiceOverviewCard extends ComponentPropsWithoutRef<"div"> {
   serviceOverviewDetail: IServiceOverviewDetail;
 }

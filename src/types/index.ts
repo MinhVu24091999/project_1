@@ -1,11 +1,11 @@
+import { ReactNode } from "react";
+
 export interface IServiceOverviewDetail {
   urlImage: string;
   title: string;
-  description: string;
-  title1: string;
-  title2: string;
-  content: {
+  description: ReactNode;
+  content?: {
     label: string;
-    contentDetail: string;
+    contentDetail: ReactNode;
   };
 }

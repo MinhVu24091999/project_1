@@ -36,7 +36,7 @@ const MessageFromCEO = () => {
               代表から皆様へ
             </p>
 
-            <p className="sm:text-2xl mb-[30px] leading-[100%]">
+            <p className="text-lg sm:text-2xl mb-[30px] leading-[180%]">
               飲食店の売却・買収で、経営者・スタッフに喜びを！！
             </p>
 

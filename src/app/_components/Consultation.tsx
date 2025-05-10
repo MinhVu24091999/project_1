@@ -22,13 +22,13 @@ const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
       />
 
       <div className="flex flex-col sm:flex-row items-center gap-x-[82px] gap-y-5 sm:gap-y-10 relative max-w-[1032px] mx-auto py-[60px] sm:pt-[114px] sm:pb-[123px] ">
-        <div className="relative w-full py-10 sm:py-0 flex items-center">
+        <div className="relative w-full py-10 sm:py-0 flex items-center bg-[#9FF0D9] sm:bg-transparent">
           <Image
-            src={"/images/consultation-bg.png"}
+            src={"/images/deco.png"}
             alt=""
-            className="absolute !w-full !h-full sm:hidden"
-            width={1440}
-            height={598}
+            className="absolute !h-full left-0 top-0 sm:hidden"
+            width={330}
+            height={330}
           />
           <Image
             src={"/images/img-ceo-5.png"}
@@ -61,11 +61,17 @@ const Consultation: FC<ComponentPropsWithoutRef<"div">> = ({
           </p>
 
           <AvailableButton
-            className="shadow-[0px_10px_0px_0px_#1B800A;] sm:px-[83px] sm:w-[506px] !py-[17px]"
+            className="shadow-[0px_10px_0px_0px_#1B800A;] sm:px-[83px] sm:min-w-[556px] !py-[17px]"
             labelClassName="!text-xl"
             contentClassName="sm:!text-[42px]"
             wrapperLabel="sm:!gap-x-4"
             iconClassName="sm:!w-[35px] sm:!h-[24px]"
+            onClick={() =>
+              window.open(
+                "https://line.me/R/ti/p/@042qotud?ts=04301146&oat_content=url",
+                "_blank"
+              )
+            }
           />
         </div>
       </div>

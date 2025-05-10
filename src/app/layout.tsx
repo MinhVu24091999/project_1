@@ -47,6 +47,9 @@ export default function RootLayout({
                 Form: {
                   itemMarginBottom: 0,
                 },
+                Modal: {
+                  contentBg: "#CFF8EB",
+                },
               },
             }}
           >
