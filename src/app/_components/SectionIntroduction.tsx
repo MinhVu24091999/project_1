@@ -38,7 +38,7 @@ const SectionIntroduction = () => {
               loop
               muted
               playsInline
-              className="h-[450px] sm:w-[660px] w-[450px] sm:h-[680px] rounded-[40px] mr-5 object-cover"
+              className="h-[450px] sm:h-[680px] w-[293px] sm:w-[440px] rounded-[40px] mr-5 object-cover object-center"
             >
               <source src="/videos/video-intro.mp4" type="video/mp4" />
             </video>
