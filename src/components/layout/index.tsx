@@ -28,7 +28,7 @@ const Layout = ({ children }: IProps) => {
   return (
     <div
       className={clsx(
-        "flex flex-col min-h-screen overflow-x-hidden",
+        "flex flex-col min-h-screen overflow-x-hidden bg-[#1B1C1F]"
       )}
     >
       <Header />

@@ -260,7 +260,7 @@ button .span-mother2 span:nth-child(8) {
 
 .ant-form-item-explain-error {
   font-size: 16px;
-  color: #FF5A5A;
+  color: #ff5a5a;
 }
 
 .ant-form-item-label {
@@ -269,24 +269,23 @@ button .span-mother2 span:nth-child(8) {
 }
 
 .swiper-wrapper {
-  display: flex ;
+  display: flex;
   align-items: stretch;
 }
 
-
 .underline-container {
-            position: relative;
-            display: inline-block;
-            width: 100%;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 .underline-container::after {
-   content: '';
-   position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 100%;
-            height: 1px;
-            background-image: linear-gradient(to right, #999999 50%, transparent 50%);
-            background-size: 8px 2px;
-            background-repeat: repeat-x;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, #999999 50%, transparent 50%);
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
 }
