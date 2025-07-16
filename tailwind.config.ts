@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -10,8 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"M PLUS 1p"', ...fontFamily.sans],
-        serif: ['"Noto Serif JP"', ...fontFamily.serif],
+        roboto: ["var(--font-roboto)", "sans-serif"],
+        oswald: ["var(--font-oswald)", "sans-serif"],
       },
       backgroundImage: {
         header: "url('/images/bg_header.jpg')",
@@ -25,25 +24,26 @@ export default {
         "title-orange": "url('/images/bg_title_orange.png')",
         "next-generation": "url('/images/bg_generation.png')",
         "evolution-content": "url('/images/bg_evolution_2.png')",
+        bgTitleClipPath: "linear-gradient(90deg, #00225A 12.79%, #0D2A84 35.85%, #3A1D8E 64.78%, #FF4E36 100%)"
       },
       keyframes: {
-        wave: {
-          "0%, 100%": { opacity: "0.2", transform: "translateY(0)" },
-          "50%": { opacity: "1", transform: "translateY(6px)" },
-        },
-        ring: {
-          "0%": { transform: "rotate(0deg)" },
-          "15%": { transform: "rotate(1deg)" },
-          "30%": { transform: "rotate(-1deg)" },
-          "45%": { transform: "rotate(1deg)" },
-          "60%": { transform: "rotate(-1deg)" },
-          "75%": { transform: "rotate(1deg)" },
-          "100%": { transform: "rotate(0deg)" },
-        },
-        zoomLoop: {
-          "0%, 100%": { transform: "scale(1)", opacity: "1" },
-          "50%": { transform: "scale(1.2)", opacity: "0.9" },
-        },
+        fullBlock: {
+        "0%": { transform: "translate(-10%, 100%) scale(1)", opacity: "0" },
+        "50%": { transform: "translateY(0)", opacity: "1" },
+        "100%": { transform: "translateY(0) scale(1.5)", opacity: "1" },
+      },
+      slideUp: {
+        "0%": { transform: "translate(-5%, 100%)", opacity: "0" },
+        "100%": { transform: "translateY(0)", opacity: "1" },
+      },
+      slideDownDesktop: {
+        "0%": { height: "58px" },
+        "100%": { height: "0" },
+      },
+      slideDownMobile: {
+        "0%": { height: "40px" },
+        "100%": { height: "0" },
+      },
         fadeIn: {
           "0%": {
             opacity: "0",
@@ -60,11 +60,10 @@ export default {
         },
       },
       animation: {
-        "wave-1": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite",
-        "wave-2": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.2s",
-        "wave-3": "wave 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.4s",
-        ring: "ring 0.6s ease-in-out",
-        zoomLoop: "zoomLoop 1.5s ease-in-out infinite",
+        "full-block": "fullBlock 2s ease-out forwards",
+        "slide-up": "slideUp 0.5s ease-out forwards",
+        "slide-down-desktop": "slideDownDesktop 1s ease-out forwards",
+        "slide-down-mobile": "slideDownMobile 1s ease-out forwards",
         fadeIn: "fadeIn 0.5s ease-in forwards",
         fadeOut: "fadeOut 0.5s ease-out forwards",
       },

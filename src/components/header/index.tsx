@@ -1,156 +1,111 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
-import clsx from "clsx";
-import { EmailIcon, LineIcon } from "@/assets/icons";
-import { PATH_ROUTER } from "@/const/path.const";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Drawer } from "antd";
-import { useState } from "react";
-import { CloseOutlined } from "@ant-design/icons";
+import { Fragment, useState } from "react";
+import { twJoin } from "tailwind-merge";
+import CloseIcon from "@/assets/icons/CloseIcon";
+import MenuIcon from "@/assets/icons/MenuIcon";
+import useWindowSize from "@/hooks/useWindowSize";
+import ArrowIcon from "@/assets/icons/ArrowIcon";
 
 const Header = () => {
-  const router = useRouter();
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { windowWidth } = useWindowSize();
 
   return (
     <>
-      <div className="fixed top-0 bg-[#FFFFFF] border-b border-[#9FF0D9] z-[500] w-full">
-        <div className="px-5 sm:px-10 py-5 flex items-center justify-between right-0 left-0 z-50 max-w-screen-2xl mx-auto overflow-hidden ">
-          <Link href={PATH_ROUTER.ROOT}>
+      <div className="fixed bg-transparent top-0 z-[500] w-full">
+        <div className="px-7 sm:px-0 pt-5 sm:pt-[50px] flex items-center justify-between right-0 left-0 z-50 max-w-[1326px] mx-auto overflow-hidden ">
+          {windowWidth <= 640 ? (
             <Image
-              src="/images/app_logo.png"
+              src="/images/logo-mobile.svg"
               alt="app logo"
-              className="h-10 w-[204px]"
-              width={204}
-              height={40}
+              className="h-[50px] w-[74px]"
+              width={74}
+              height={50}
             />
-          </Link>
+          ) : (
+            <Image
+              src="/images/logo-desktop.svg"
+              alt="app logo"
+              className="h-[45px] w-[182px]"
+              width={182}
+              height={45}
+            />
+          )}
 
-          <div className="hidden sm:flex items-center gap-x-5">
-            <div className="flex items-center gap-x-10 text-lg font-medium">
+          <div className="hidden sm:flex items-start gap-x-10">
+            {DATA_PATH.map((item, index) => (
               <Link
-                href={PATH_ROUTER.INTRODUCE}
-                className={clsx(
-                  pathName.replaceAll("/", "") ===
-                    PATH_ROUTER.INTRODUCE.replaceAll("/", "")
-                    ? "text-[#1EA68B]"
-                    : "text-[#000000]"
+                href={item.path}
+                key={index}
+                className={twJoin(
+                  "text-2xl font-bold leading-[32px] flex flex-col gap-y-1"
                 )}
               >
-                サービス紹介
-              </Link>
-              <Link
-                href={PATH_ROUTER.COMPANY_PROFILE}
-                className={clsx(
-                  pathName.replaceAll("/", "") ===
-                    PATH_ROUTER.COMPANY_PROFILE.replaceAll("/", "")
-                    ? "text-[#1EA68B]"
-                    : "text-[#000000]"
+                {item.title}
+
+                {pathName.replaceAll("/", "") ===
+                item.path.replaceAll("/", "") ? (
+                  <div className="w-full h-[1px] bg-white" />
+                ) : (
+                  <Fragment />
                 )}
-              >
-                会社概要
               </Link>
-
-              <div className="flex items-center gap-x-5">
-                <button
-                  className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15]"
-                  onClick={() =>
-                    window.open(
-                      "https://line.me/R/ti/p/@042qotud?ts=04301146&oat_content=url",
-                      "_blank"
-                    )
-                  }
-                >
-                  <LineIcon />
-                  LINEでお問い合わせ
-                </button>
-
-                <button className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#174A42]">
-                  <EmailIcon className="w-[23px] h-[18px]" />
-                  メールでお問い合わせ
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div
-            className="w-5 flex flex-col gap-y-1 cursor-pointer sm:hidden"
+            className="flex flex-col gap-y-1 cursor-pointer sm:hidden"
             onClick={() => setIsOpen(true)}
           >
-            <div className="bg-black w-full h-[3px] rounded-full" />
-            <div className="bg-black w-full h-[3px] rounded-full" />
-            <div className="bg-black w-full h-[3px] rounded-full" />
+            <MenuIcon className="w-10 h-5" />
           </div>
         </div>
       </div>
 
       <Drawer
-        title={
-          <button
-            className="ml-auto w-full flex justify-end"
-            onClick={() => setIsOpen(false)}
-          >
-            <CloseOutlined size={20} />
-          </button>
-        }
-        width={"85%"}
+        title={""}
+        width={"100%"}
         placement="right"
         closable={false}
         onClose={() => setIsOpen(false)}
         open={isOpen}
-        style={{ background: "#CFF8EB" }}
+        style={{ background: "#FFFFFF" }}
       >
-        <div className="flex flex-col gap-y-5 h-full">
-          <Link
-            href={PATH_ROUTER.ROOT}
-            className={clsx(
-              pathName === "/" ? "!text-[#1EA68B]" : "!text-[#000000]"
-            )}
-            onClick={() => setIsOpen(false)}
-          >
-            ホーム
-          </Link>
-          <Link
-            href={PATH_ROUTER.INTRODUCE}
-            className={clsx(
-              pathName.replaceAll("/", "") ===
-                PATH_ROUTER.INTRODUCE.replaceAll("/", "")
-                ? "!text-[#1EA68B]"
-                : "!text-[#000000]"
-            )}
-            onClick={() => setIsOpen(false)}
-          >
-            サービス紹介
-          </Link>
-          <Link
-            href={PATH_ROUTER.COMPANY_PROFILE}
-            className={clsx(
-              pathName.replaceAll("/", "") ===
-                PATH_ROUTER.COMPANY_PROFILE.replaceAll("/", "")
-                ? "!text-[#1EA68B]"
-                : "!text-[#000000]"
-            )}
-            onClick={() => setIsOpen(false)}
-          >
-            会社概要
-          </Link>
+        <div className="flex flex-col items-center pt-[6px] gap-y-[80px] relative">
+          <Image
+            src="/images/logo-black.png"
+            alt="app logo"
+            className="h-[50px] w-[74px]"
+            width={74}
+            height={50}
+          />
 
-          <div className="mt-auto flex flex-col gap-y-5">
-            <button className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full  bg-[#2DBF15] w-full min-h-[54px]">
-              <LineIcon />
-              LINEでお問い合わせ
-            </button>
+          <button
+            className="absolute top-3 right-[10px]"
+            onClick={() => setIsOpen(false)}
+          >
+            <CloseIcon className="w-5 h-[17px]" />
+          </button>
+          <div className="flex flex-col gap-y-[30px] h-full items-center">
+            {DATA_PATH.map((item, index) => (
+              <Link
+                href={item.path}
+                key={index}
+                className={twJoin(
+                  "text-2xl font-bold leading-[150%] flex items-center justify-between font-oswald w-[189px]"
+                )}
+              >
+                {item.title}
 
-            <button
-              className="!text-white flex items-center justify-center gap-x-[5px] py-3 px-[30px] rounded-full bg-[#174A42] w-full min-h-[54px]"
-              onClick={() => router.push(PATH_ROUTER.CONTACT)}
-            >
-              <EmailIcon className="w-[23px] h-[18px] " />
-              メールでお問い合わせ
-            </button>
+                <ArrowIcon className="" />
+              </Link>
+            ))}
           </div>
         </div>
       </Drawer>
@@ -159,3 +114,30 @@ const Header = () => {
 };
 
 export default Header;
+
+export const DATA_PATH = [
+  {
+    title: "Home",
+    path: "/"
+  },
+  {
+    title: "What We Do",
+    path: "/what-we-do"
+  },
+  {
+    title: "Information",
+    path: "/information"
+  },
+  {
+    title: "Company",
+    path: "/company"
+  },
+  {
+    title: "Join Us",
+    path: "/join-us"
+  },
+  {
+    title: "Contact",
+    path: "/contact"
+  }
+];

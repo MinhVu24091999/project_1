@@ -1,48 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { LineIcon } from "@/assets/icons";
-import { PATH_ROUTER } from "@/const/path.const";
+
+import Image from "next/image";
+import { DATA_PATH } from "../header";
 import Link from "next/link";
 
 const Footer = () => {
-  const handleScroll = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section className="relative bg-[#F3F3F3] min-h-[400px] sm:min-h-[538px] flex flex-col sm:flex-row justify-center items-center text-[#000000] px-5 sm:px-0">
-      <div className="flex items-center justify-center gap-y-10 sm:gap-5 md:gap-[100px] mb-10 md:mb-0 flex-wrap">
-        <button onClick={handleScroll}>
-          <img
-            src="/images/app_logo.png"
-            alt="app logo"
-            className=" sm:h-[100px] sm:w-[532px]"
-          />
-        </button>
-
-        <div className="w-[1px] h-[240px] bg-[#999999] hidden sm:block" />
-
-        <div className="flex flex-col sm:flex-row items-center gap-x-[100px] gap-y-5">
-          <div className="flex flex-col gap-x-5 gap-y-[30px] font-bold items-center sm:items-start">
-            <a href={""}>サービス紹介</a>
-            <a href={"PATH_ROUTER.COMPANY_PROFILE"}>会社概要</a>
-          </div>
-
-          <Link
-            href={PATH_ROUTER.CONTACT}
-            className="flex items-center gap-x-[5px] py-[17.5px] px-[30px] rounded-full text-lg bg-[#2DBF15] text-white"
-          >
-            <LineIcon />
-            お問い合わせ
+    <section className="relative flex flex-col items-center max-w-[1155px] w-full pb-[80px] mx-auto px-[50px] sm:px-0">
+      <Image
+        src="/images/logo-desktop.svg"
+        alt="app logo"
+        className="h-[45px] w-[182px]"
+        width={182}
+        height={45}
+      />
+      <div className="w-full flex items-center sm:justify-between gap-x-[30px] mt-5 sm:mt-[30px] flex-wrap gap-y-5">
+        {DATA_PATH.map((item, index) => (
+          <Link key={index} href={item.path} className="sm:text-2xl">
+            {item.title}
           </Link>
-        </div>
+        ))}
+        <p className="sm:text-2xl">プライバシーポリシー</p>
       </div>
-      <div className="absolute bottom-2 md:bottom-5 text-sm ">
-        {`© ${new Date().getFullYear()} 店舗ステーション. All rights reserved.`}
-      </div>
+      <div className="mt-[30px] sm:mt-[50px]">{`© ${new Date().getFullYear()} ROGYX CO.LTD.`}</div>
     </section>
   );
 };
