@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(roboto.variable,oswald.variable, "font-roboto bg-[#1B1C1F]")}>
+      <body className={twMerge(roboto.variable,oswald.variable, "font-roboto bg-[#1B1C1F]")}  suppressHydrationWarning={true}>
         <AOSComponent>
           <ConfigProvider
             theme={{

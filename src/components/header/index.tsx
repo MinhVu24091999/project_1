@@ -100,6 +100,7 @@ const Header = () => {
                 className={twJoin(
                   "text-2xl font-bold leading-[150%] flex items-center justify-between font-oswald w-[189px]"
                 )}
+                onClick={() => setIsOpen(false)}
               >
                 {item.title}
 

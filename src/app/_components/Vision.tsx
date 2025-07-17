@@ -5,7 +5,7 @@ import Image from "next/image";
 const Vision = () => {
   return (
     <div className="flex flex-col items-center max-w-[1137px] mx-auto my-[100px] sm:mt-[220px] px-5 sm:px-0">
-      <TitleClipPath className="px-[115] sm:px-[144px]">Vision</TitleClipPath>
+      <TitleClipPath className="px-[115px] sm:px-[144px]">Vision</TitleClipPath>
 
       <div className="flex flex-col sm:flex-row sm:items-center gap-x-[50px] mt-[30px] sm:mt-[60px] sm:w-full justify-start sm:pl-[50px]">
         <p className="text-[48px] leading-[150%] sm:text-[88px] sm:leading-[100px] font-bold">

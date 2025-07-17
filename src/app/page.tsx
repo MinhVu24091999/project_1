@@ -59,16 +59,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col items-center max-w-[1240px] mx-auto my-[100px] sm:my-[220px] px-5 sm:px-0 gap-y-[10px]">
-        <p className="text-[56px] leading-[64px] sm:text-[88px] sm:leading-[100px] font-bold">
-          Contact us
-        </p>
-        <div className="h-2 w-[70px] sm:w-[100px] bg-white" />
-        <p className="leading-[24px] sm:text-2xl sm:leading-[32px] font-bold">
-          Go for it !
-        </p>
-      </div>
     </div>
   );
 }
