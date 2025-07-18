@@ -10,7 +10,7 @@ const ArrowIcon: FC<SVGProps<SVGSVGElement>> = ({ ...otherProps }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...otherProps}
     >
-      <path d="M0 7.5H31L16 1.5" stroke="#181819" strokeWidth="2" />
+      <path d="M0 7.5H31L16 1.5" stroke="currentColor" strokeWidth="2" />
     </svg>
   );
 };

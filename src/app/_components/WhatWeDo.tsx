@@ -2,6 +2,7 @@ import React, { ComponentPropsWithoutRef, FC } from "react";
 import TitleClipPath from "./TitleClipPath";
 import Image from "next/image";
 import { twJoin, twMerge } from "tailwind-merge";
+import Tilt from "react-parallax-tilt";
 
 const data = [
   {
@@ -56,26 +57,28 @@ const WhatWeDoCard: FC<WhatWeDoCardProps> = ({
   positionText
 }) => {
   return (
-    <div
-      className={twMerge("w-full relative flex items-center justify-center")}
-    >
-      <Image
-        src={urlImage}
-        alt=""
-        width={278}
-        height={271}
-        className="sm:w-full max-w-[278px] sm:max-w-full"
-      />
-
+    <Tilt>
       <div
-        className={twJoin(
-          "absolute sm:left-1/2 top-1/2 -translate-y-1/2 sm:text-[88px] sm:leading-[100px] sm:-translate-x-1/2 sm:text-center font-bold text-[56px] leading-[64px]",
-          positionText === "left" ? "left-0 text-start" : "right-0 text-end"
-        )}
+        className={twMerge("w-full relative flex items-center justify-center")}
       >
-        {children}
+        <Image
+          src={urlImage}
+          alt=""
+          width={278}
+          height={271}
+          className="sm:w-full max-w-[278px] sm:max-w-full"
+        />
+
+        <div
+          className={twJoin(
+            "absolute sm:left-1/2 top-1/2 -translate-y-1/2 sm:text-[88px] sm:leading-[100px] sm:-translate-x-1/2 sm:text-center font-bold text-[56px] leading-[64px]",
+            positionText === "left" ? "left-0 text-start" : "right-0 text-end"
+          )}
+        >
+          {children}
+        </div>
       </div>
-    </div>
+    </Tilt>
   );
 };
 

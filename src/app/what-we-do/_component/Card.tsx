@@ -26,7 +26,7 @@ const Card: FC<CardProps> = ({
           alt=""
           width={751}
           height={469}
-          className="w-[240px] h-[195px] sm:w-[751px] sm:h-[469]"
+          className="w-[240px] h-[195px] sm:w-[751px] sm:h-[469px]"
         />
       </div>
 

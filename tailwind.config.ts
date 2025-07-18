@@ -9,6 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
         roboto: ["var(--font-roboto)", "sans-serif"],
         oswald: ["var(--font-oswald)", "sans-serif"],
       },

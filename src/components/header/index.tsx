@@ -104,7 +104,7 @@ const Header = () => {
               >
                 {item.title}
 
-                <ArrowIcon className="" />
+                <ArrowIcon className="text-black" />
               </Link>
             ))}
           </div>

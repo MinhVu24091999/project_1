@@ -9,3 +9,10 @@ export interface IServiceOverviewDetail {
     contentDetail: ReactNode;
   };
 }
+
+export interface InformationInterface {
+  time: string;
+  title: string;
+  description: string;
+  content: string[];
+}
