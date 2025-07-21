@@ -32,7 +32,7 @@ const AppPhoneInput: React.FC<Props> = ({
 
   return (
     <Input
-      className={clsx("!bg-[#F1FCF9] px-2 py-5", className)}
+      className={clsx(" px-4 py-2", className)}
       {...otherProps}
       value={value}
       onChange={handleChange}

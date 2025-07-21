@@ -4,6 +4,7 @@
 import Image from "next/image";
 import { DATA_PATH } from "../header";
 import Link from "next/link";
+import { PRIVACY_POLICY } from "@/const/path.const";
 
 const Footer = () => {
   return (
@@ -30,7 +31,9 @@ const Footer = () => {
             {item.title}
           </Link>
         ))}
-        <p className="sm:text-2xl">プライバシーポリシー</p>
+        <Link href={PRIVACY_POLICY} className="sm:text-2xl">
+          プライバシーポリシー
+        </Link>
       </div>
       <div className="mt-[30px] sm:mt-[50px]">{`© ${new Date().getFullYear()} ROGYX CO.LTD.`}</div>
     </section>

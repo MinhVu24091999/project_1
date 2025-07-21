@@ -40,34 +40,35 @@ export default function RootLayout({
             theme={{
               components: {
                 Select: {
-                  activeBorderColor: "#E0E0E0",
-                  hoverBorderColor: "#E0E0E0",
+                  activeBorderColor: "#CCC",
+                  hoverBorderColor: "#CCC",
                   activeOutlineColor: "transparent",
                   optionFontSize: 20,
                   optionPadding: "20px 8px 20px 8px",
-                  selectorBg: "#F1FCF9",
+                  selectorBg: "#FFF",
                   showArrowPaddingInlineEnd: 50,
+                  
                 },
                 Input: {
-                  activeBorderColor: "#E0E0E0",
-                  hoverBorderColor: "#CFF8EB",
+                  activeBorderColor: "#CCC",
+                  hoverBorderColor: "#CCC",
                   activeShadow: "transparent",
-                  activeBg: "#F1FCF9",
-                  addonBg: "#F1FCF9",
-                  hoverBg: "#F1FCF9",
-                  inputFontSize: 20,
+                  activeBg: "#FFF",
+                  addonBg: "#FFF",
+                  hoverBg: "#FFF",
+                  inputFontSize: 16,
                 },
                 Form: {
                   itemMarginBottom: 0,
                 },
                 Modal: {
-                  contentBg: "#CFF8EB",
+                  contentBg: "#FFF",
                 },
               },
             }}
           >
             <Header />
-            <div className="w-full min-h-screen  overflow-hidden">
+            <div className="w-full  overflow-hidden">
               {children}
             </div>
             <Footer />

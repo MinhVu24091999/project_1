@@ -6,3 +6,5 @@ export const PATH_ROUTER = {
 };
 
 export const MAP_LINK = "";
+
+export const PRIVACY_POLICY = "/privacy-policy";
