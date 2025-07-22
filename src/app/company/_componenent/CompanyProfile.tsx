@@ -5,19 +5,19 @@ import { twJoin } from "tailwind-merge";
 const data = [
   {
     label: "会社名",
-    content: "株式会社ROGYX（ロジクス）"
+    content: "株式会社ROGYX（ロジクス）",
   },
   {
     label: "設立",
-    content: "2018年9月19日"
+    content: "2018年9月19日",
   },
   {
     label: "代表者",
-    content: "HIROTOMO NAGAO"
+    content: "HIROTOMO NAGAO",
   },
   {
     label: "所在地",
-    content: "東京都千代田区丸の内3丁目2-2　二重橋ビル 2階"
+    content: "東京都千代田区丸の内3丁目2-2　二重橋ビル 2階",
   },
   {
     label: "事業内容",
@@ -27,8 +27,8 @@ const data = [
         <li>テキストテキストテキスト</li>
         <li>テキストテキストテキスト</li>
       </ul>
-    )
-  }
+    ),
+  },
 ];
 
 const CompanyProfile = () => {
@@ -59,7 +59,7 @@ export default CompanyProfile;
 const CompanyProfileItem: FC<CompanyProfileItemProps> = ({
   label,
   contentData,
-  className
+  className,
 }) => {
   return (
     <div
@@ -70,7 +70,7 @@ const CompanyProfileItem: FC<CompanyProfileItemProps> = ({
         className
       )}
     >
-      <div className="min-w-[96px]">{label}</div>
+      <div className="min-w-[96px] sm:min-w-[100px]">{label}</div>
       <div className="w-full">{contentData}</div>
     </div>
   );

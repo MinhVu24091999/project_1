@@ -21,7 +21,7 @@ const Map = () => {
       />
 
       <div className="flex flex-col sm:flex-row items-end sm:items-center sm:justify-between gap-y-[30px] w-full leading-[24px] sm:text-2xl sm:leading-[30px] mt-[30px] sm:mt-[60px]">
-        <p className="w-full text-center sm:text-start font-inter">
+        <p className="w-full text-center sm:text-start">
           東京都千代田区丸の内3丁目2-2　二重橋ビル 2階
         </p>
         <Link

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Clause from "./Clause";
 
@@ -10,7 +12,7 @@ const data1 = [
   "プライバシーポリシーの改訂",
   "個人情報の開示・訂正・削除",
   "クッキー（Cookie）の取扱について",
-  "アクセスログについて"
+  "アクセスログについて",
 ];
 
 const data2 = [
@@ -18,7 +20,7 @@ const data2 = [
   "当社のサービスをより向上させるため",
   "お客様のお問い合わせまたはご要望に対して回答または対応させていただくため",
   "お客様のご意見をお聞きするなど、制作等の企画の参考のため",
-  "必要に応じてお客様に連絡をするため"
+  "必要に応じてお客様に連絡をするため",
 ];
 
 const data3 = [
@@ -27,12 +29,16 @@ const data3 = [
   "生命、身体および財産等に対する差し迫った危険があり、緊急の必要があると認められる場合",
   "法令等に定めがある場合",
   "その他正当な理由がある場合",
-  "当社のサービス向上の為に当社が必要不可欠と認め、当社が信頼する第三者に個人情報を提供する場合"
+  "当社のサービス向上の為に当社が必要不可欠と認め、当社が信頼する第三者に個人情報を提供する場合",
 ];
 
 const page = () => {
+  const handleOnTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="flex flex-col items-center max-w-[1240px] mx-auto px-5 sm:px-0">
+    <div className="flex flex-col items-center max-w-[1240px] mx-auto px-5 sm:px-0 pb-[100px] sm:pb-[220px]">
       <p className="font-bold font-inter sm:text-[104px] sm:leading-[116px] sm:py-[220px] pt-[160px] pb-[100px] text-[32px] leading-[40px] mx-auto">
         プライバシーポリシー
       </p>
@@ -148,6 +154,13 @@ const page = () => {
           <br />
           なお、弊社では統計や広告の効果測定のために、メールに記載されたURL等をユーザがクリックしたことによるユーザの行動履歴の取得や、画像データに同様の仕組みを持たせる開封履歴を取得することがあります。
         </Clause>
+
+        <button
+          className="px-5 py-2.5 sm:py-5 sm:px-10 leading-[24px] sm:text-2xl sm:leading-[32px] border border-white w-fit mx-auto"
+          onClick={handleOnTop}
+        >
+          TOP
+        </button>
       </div>
     </div>
   );

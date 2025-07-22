@@ -13,7 +13,7 @@ const data = [
       </p>
     ),
     urlImage: "/images/what-we-do-1.png",
-    positionText: "left"
+    positionText: "left",
   },
   {
     label: (
@@ -23,13 +23,16 @@ const data = [
       </p>
     ),
     urlImage: "/images/what-we-do-2.png",
-    positionText: "right"
-  }
+    positionText: "right",
+  },
 ];
 
 const WhatWeDo = () => {
   return (
-    <div className="flex flex-col items-center max-w-[1193px] mx-auto my-[100px] sm:mt-[220px] px-5 sm:px-0 gap-y-[30px] sm:gap-y-[60px]">
+    <div
+      className="flex flex-col items-center max-w-[1193px] mx-auto my-[100px] sm:mb-0 sm:mt-[220px] px-5 sm:px-0 gap-y-[30px] sm:gap-y-[60px]"
+      id="what-we-do-id"
+    >
       <TitleClipPath className="px-[58px] sm:px-[100px]">
         What We Do
       </TitleClipPath>
@@ -54,7 +57,7 @@ export default WhatWeDo;
 const WhatWeDoCard: FC<WhatWeDoCardProps> = ({
   children,
   urlImage,
-  positionText
+  positionText,
 }) => {
   return (
     <Tilt>

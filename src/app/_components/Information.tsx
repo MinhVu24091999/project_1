@@ -6,21 +6,21 @@ import Link from "next/link";
 const data = [
   {
     time: "2025/06/20",
-    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。"
+    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。",
   },
   {
     time: "2025/06/20",
-    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。"
+    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。",
   },
   {
     time: "2025/06/20",
-    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。"
-  }
+    content: "タイトルが入ります。タイトルが入ります。タイトルが入ります。",
+  },
 ];
 
 const Information = () => {
   return (
-    <div className="flex flex-col items-center max-w-[1193px] mx-auto my-[100px] sm:mt-[220px] px-5 sm:px-0 ">
+    <div className="flex flex-col items-center max-w-[1193px] mx-auto my-[100px] sm:mb-0 sm:mt-[220px] px-5 sm:px-0 ">
       <TitleClipPath className="px-[67px] sm:px-[98px]">
         Information
       </TitleClipPath>

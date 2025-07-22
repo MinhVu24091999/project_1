@@ -28,7 +28,7 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
     api[type]({
       message,
       description,
-      placement: "top"
+      placement: "top",
     });
   };
 
@@ -54,9 +54,9 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify(formData),
         }
       );
 
@@ -120,8 +120,8 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
                 validator: (_, value) =>
                   !value || value.length <= 30
                     ? Promise.resolve()
-                    : Promise.reject("30文字以内で入力してください")
-              }
+                    : Promise.reject("30文字以内で入力してください"),
+              },
             ]}
           >
             <AppInput placeholder="〇〇株式会社" />
@@ -129,15 +129,15 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
 
           <Form.Item
             name="name"
-            label={<LabelForm label="電話番号" />}
+            label={<LabelForm label="お名前" />}
             rules={[
               { required: true, message: "名前を入力してください" },
               {
                 validator: (_, value) =>
                   !value || value.length <= 30
                     ? Promise.resolve()
-                    : Promise.reject("30文字以内で入力してください")
-              }
+                    : Promise.reject("30文字以内で入力してください"),
+              },
             ]}
           >
             <AppInput placeholder="山田太郎" />
@@ -150,8 +150,8 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
               { required: true, message: "電話番号を入力してください" },
               {
                 pattern: /^0\d{2}-\d{4}-\d{4}$/,
-                message: "正しい形式で入力してください（例: 000-0000-0000）"
-              }
+                message: "正しい形式で入力してください（例: 000-0000-0000）",
+              },
             ]}
           >
             <AppPhoneInput placeholder="000-0000-0000" />
@@ -164,8 +164,8 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
               { required: true, message: "メールアドレスを入力してください" },
               {
                 type: "email",
-                message: "有効なメールアドレスを入力してください"
-              }
+                message: "有効なメールアドレスを入力してください",
+              },
             ]}
             labelAlign="left"
           >
@@ -176,7 +176,7 @@ const ContactForm: FC<ComponentPropsWithoutRef<"div">> = ({
             label={<LabelForm label="お問い合わせ内容" />}
             name="inquiryContent"
             rules={[
-              { required: true, message: "お問い合わせ内容をご入力ください" }
+              { required: true, message: "お問い合わせ内容をご入力ください" },
             ]}
           >
             <TextArea

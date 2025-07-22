@@ -4,7 +4,7 @@ const InformationDetail: FC<InformationDetailProps> = ({
   title,
   time,
   content,
-  onBack
+  onBack,
 }) => {
   return (
     <div className="flex flex-col max-w-[1240px] w-full mx-auto sm:pt-[315px] pt-[160px] px-5 sm:px-0">
@@ -28,7 +28,7 @@ const InformationDetail: FC<InformationDetailProps> = ({
       </ul>
 
       <button
-        className="px-5 py-2.5 sm:py-5 sm:px-10 leading-[24px] sm:text-2xl sm:leading-[32px] border border-white w-fit mx-auto sm:mt-[100px] mt-[50px] hidden sm:block"
+        className="px-5 py-2.5 sm:py-5 sm:px-10 leading-[24px] sm:text-2xl sm:leading-[32px] border border-white w-fit mx-auto sm:mt-[100px] mt-[50px]"
         onClick={onBack}
       >
         {"<< back "}

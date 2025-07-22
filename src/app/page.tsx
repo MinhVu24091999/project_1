@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Information from "./_components/Information";
-import LeadTheWay from "./_components/LeadTheWay";
 import Vision from "./_components/Vision";
 import WhatWeDo from "./_components/WhatWeDo";
+import LeadTheWay from "./_components/LeadTheWay";
+import Information from "./_components/Information";
 
 export default function HomePage() {
   return (
@@ -33,27 +33,46 @@ export default function HomePage() {
       <Vision />
       <WhatWeDo />
       <Information />
-      <div className="flex flex-col sm:flex-row sm:items-center max-w-[1240px] mx-auto my-[100px] sm:mt-[220px] px-5 sm:px-0 gap-y-[30px]">
-        <div className="w-full relative">
-          <Image src="/images/company.png" alt="" width={620} height={403} />
+      <div className="flex flex-col sm:flex-row sm:items-center max-w-[1240px] mx-auto my-[100px] sm:mt-[220px] sm:mb-0 px-5 sm:px-0 gap-y-[30px]">
+        <div className="w-full relative company-container cursor-pointer group overflow-hidden">
+          <Image
+            src="/images/company.png"
+            alt=""
+            width={620}
+            height={403}
+            className="transition-all duration-1000 transform scale-105"
+            style={{
+              transition: "transform 1s cubic-bezier(.165,.84,.44,1);",
+            }}
+          />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-y-[10px]">
-            <p className="text-[48px] leading-[56px] sm:text-[72px] sm:leading-[80px] font-bold">
+            <p className="text-[48px] leading-[56px] sm:text-[72px] sm:leading-[80px] font-bold company-text">
               Company
             </p>
-            <div className="h-2 w-[65px] sm:w-[100px] bg-white" />
-            <p className="leading-[24px] sm:text-2xl sm:leading-[32px] font-bold">
+            <div className="h-2 w-[65px] sm:w-[100px] bg-white company-divider" />
+            <p className="leading-[24px] sm:text-2xl sm:leading-[32px] font-bold company-text company-text-small">
               About ROGYX
             </p>
           </div>
         </div>
-        <div className="w-full relative">
-          <Image src="/images/joinUs.png" alt="" width={620} height={403} />
+
+        <div className="w-full relative company-container cursor-pointer group overflow-hidden">
+          <Image
+            src="/images/joinUs.png"
+            alt=""
+            width={620}
+            height={403}
+            className="transition-all duration-1000 transform scale-105"
+            style={{
+              transition: "transform 1s cubic-bezier(.165,.84,.44,1);",
+            }}
+          />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-y-[10px]">
-            <p className="text-[48px] leading-[56px] sm:text-[72px] sm:leading-[80px] font-bold">
+            <p className="text-[48px] leading-[56px] sm:text-[72px] sm:leading-[80px] font-bold company-text">
               Join us
             </p>
-            <div className="h-2 w-[65px] sm:w-[100px] bg-white" />
-            <p className="leading-[24px] sm:text-2xl sm:leading-[32px] font-bold">
+            <div className="h-2 w-[65px] sm:w-[100px] bg-white company-divider" />
+            <p className="leading-[24px] sm:text-2xl sm:leading-[32px] font-bold company-text company-text-small">
               And make it move
             </p>
           </div>
